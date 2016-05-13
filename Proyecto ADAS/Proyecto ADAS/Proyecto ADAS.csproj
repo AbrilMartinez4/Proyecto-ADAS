@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DBFB447C-5D26-40AC-AD71-6EDA76A27B9A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Proyecto_ADAS</RootNamespace>
+    <AssemblyName>Proyecto ADAS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v15.1" />
+    <Reference Include="DevExpress.Data.v15.1" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1" />
+    <Reference Include="DevExpress.Sparkline.v15.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v15.1" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendario.Designer.cs">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Evento\Evento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evento\Evento.Designer.cs">
+      <DependentUpon>Evento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Evento\EventoEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evento\EventoEdicion.Designer.cs">
+      <DependentUpon>EventoEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Horario\Horario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Horario\Horario.Designer.cs">
+      <DependentUpon>Horario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Horario\HorarioEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Horario\HorarioEdicion.Designer.cs">
+      <DependentUpon>HorarioEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\MaestroEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestros\MaestroEdicion.Designer.cs">
+      <DependentUpon>MaestroEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\Maestros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestros\Maestros.Designer.cs">
+      <DependentUpon>Maestros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuS.Designer.cs">
+      <DependentUpon>MenuS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Calendario.resx">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evento\Evento.resx">
+      <DependentUpon>Evento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evento\EventoEdicion.resx">
+      <DependentUpon>EventoEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Horario\Horario.resx">
+      <DependentUpon>Horario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Horario\HorarioEdicion.resx">
+      <DependentUpon>HorarioEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestros\MaestroEdicion.resx">
+      <DependentUpon>MaestroEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestros\Maestros.resx">
+      <DependentUpon>Maestros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuS.resx">
+      <DependentUpon>MenuS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\TITULACION.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\galgos_roster.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\maestro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imagen-horario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Modulo.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

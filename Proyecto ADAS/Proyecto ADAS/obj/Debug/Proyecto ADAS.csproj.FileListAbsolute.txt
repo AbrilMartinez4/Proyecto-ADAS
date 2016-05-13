@@ -1,0 +1,17 @@
+C:\Users\Abril\Desktop\Proyecto ADAS\Proyecto ADAS\bin\Debug\Proyecto ADAS.exe
+C:\Users\Abril\Desktop\Proyecto ADAS\Proyecto ADAS\bin\Debug\Proyecto ADAS.pdb
+C:\Users\Abril\Desktop\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto ADAS.csprojResolveAssemblyReference.cache
+C:\Users\Abril\Desktop\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto_ADAS.Properties.Resources.resources
+C:\Users\Abril\Desktop\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto ADAS.csproj.GenerateResource.Cache
+C:\Users\Abril\Desktop\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto ADAS.exe
+C:\Users\Abril\Desktop\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto ADAS.pdb
+C:\Users\Abril\Desktop\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto_ADAS.Maestros.resources
+C:\Users\Abril\Desktop\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto ADAS.exe.licenses
+C:\Users\Abril\Desktop\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto_ADAS.Calendario.resources
+C:\Users\Abril\Desktop\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto_ADAS.Evento.resources
+C:\Users\Abril\Desktop\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto_ADAS.EventoEdicion.resources
+C:\Users\Abril\Desktop\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto_ADAS.Inicio.resources
+C:\Users\Abril\Desktop\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto_ADAS.Horario.resources
+C:\Users\Abril\Desktop\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto_ADAS.HorarioEdicion.resources
+C:\Users\Abril\Desktop\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto_ADAS.MaestroEdicion.resources
+C:\Users\Abril\Desktop\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto_ADAS.MenuS.resources
