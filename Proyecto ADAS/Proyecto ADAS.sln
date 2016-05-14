@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto ADAS", "Proyecto ADAS\Proyecto ADAS.csproj", "{DBFB447C-5D26-40AC-AD71-6EDA76A27B9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto.Data", "Data\Proyecto.Data.csproj", "{3603539A-2B09-476E-8C22-07CF70B5069B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto.BL", "BL\Proyecto.BL.csproj", "{64DCBDBB-7A8D-4A8D-BC88-3B32C21441FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{DBFB447C-5D26-40AC-AD71-6EDA76A27B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBFB447C-5D26-40AC-AD71-6EDA76A27B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBFB447C-5D26-40AC-AD71-6EDA76A27B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3603539A-2B09-476E-8C22-07CF70B5069B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3603539A-2B09-476E-8C22-07CF70B5069B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3603539A-2B09-476E-8C22-07CF70B5069B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3603539A-2B09-476E-8C22-07CF70B5069B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64DCBDBB-7A8D-4A8D-BC88-3B32C21441FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64DCBDBB-7A8D-4A8D-BC88-3B32C21441FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64DCBDBB-7A8D-4A8D-BC88-3B32C21441FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64DCBDBB-7A8D-4A8D-BC88-3B32C21441FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
