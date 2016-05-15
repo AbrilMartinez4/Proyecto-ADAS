@@ -369,7 +369,7 @@ namespace Data.Evento {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TipoEventoRow AddTipoEventoRow(System.Guid TipoEventoID, byte[] Descripcion) {
+            public TipoEventoRow AddTipoEventoRow(System.Guid TipoEventoID, string Descripcion) {
                 TipoEventoRow rowTipoEventoRow = ((TipoEventoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TipoEventoID,
@@ -412,7 +412,7 @@ namespace Data.Evento {
             private void InitClass() {
                 this.columnTipoEventoID = new global::System.Data.DataColumn("TipoEventoID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTipoEventoID);
-                this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescripcion);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTipoEventoID}, true));
@@ -573,10 +573,10 @@ namespace Data.Evento {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte[] Descripcion {
+            public string Descripcion {
                 get {
                     try {
-                        return ((byte[])(this[this.tableTipoEvento.DescripcionColumn]));
+                        return ((string)(this[this.tableTipoEvento.DescripcionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Descripcion\' in table \'TipoEvento\' is DBNull.", e);
@@ -770,7 +770,7 @@ namespace Data.Evento.TipoEventoTableAdapters {
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TipoEventoID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEventoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Descripcion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descripcion", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [TipoEvento] ([TipoEventoID], [Descripcion]) VALUES (@TipoEventoID, @" +
@@ -778,17 +778,17 @@ namespace Data.Evento.TipoEventoTableAdapters {
                 "oID = @TipoEventoID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TipoEventoID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEventoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [TipoEvento] SET [TipoEventoID] = @TipoEventoID, [Descripcion] = @Descripcion WHERE (([TipoEventoID] = @Original_TipoEventoID) AND ((@IsNull_Descripcion = 1 AND [Descripcion] IS NULL) OR ([Descripcion] = @Original_Descripcion)));
 SELECT TipoEventoID, Descripcion FROM TipoEvento WHERE (TipoEventoID = @TipoEventoID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TipoEventoID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEventoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TipoEventoID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEventoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Descripcion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descripcion", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -808,12 +808,10 @@ SELECT TipoEventoID, Descripcion FROM TipoEvento WHERE (TipoEventoID = @TipoEven
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "UPDATE [TipoEvento] SET [Descripcion] = @Descripcion WHERE ([TipoEventoID] = @Ori" +
-                "ginal_TipoEventoID);\r\nSELECT TipoEventoID, Descripcion FROM TipoEvento WHERE (Ti" +
-                "poEventoID = @TipoEventoID)";
+            this._commandCollection[1].CommandText = "UPDATE [TipoEvento] SET [Descripcion] = @Descripcion WHERE (TipoEventoID = @TipoE" +
+                "ventoID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarBinary, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TipoEventoID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEventoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TipoEventoID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEventoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
@@ -879,7 +877,7 @@ SELECT TipoEventoID, Descripcion FROM TipoEvento WHERE (TipoEventoID = @TipoEven
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(System.Guid Original_TipoEventoID, byte[] Original_Descripcion) {
+        public virtual int Delete(System.Guid Original_TipoEventoID, string Original_Descripcion) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((System.Guid)(Original_TipoEventoID));
             if ((Original_Descripcion == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -887,7 +885,7 @@ SELECT TipoEventoID, Descripcion FROM TipoEvento WHERE (TipoEventoID = @TipoEven
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((byte[])(Original_Descripcion));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Descripcion));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -909,13 +907,13 @@ SELECT TipoEventoID, Descripcion FROM TipoEvento WHERE (TipoEventoID = @TipoEven
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.Guid TipoEventoID, byte[] Descripcion) {
+        public virtual int Insert(System.Guid TipoEventoID, string Descripcion) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((System.Guid)(TipoEventoID));
             if ((Descripcion == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((byte[])(Descripcion));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Descripcion));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -937,13 +935,13 @@ SELECT TipoEventoID, Descripcion FROM TipoEvento WHERE (TipoEventoID = @TipoEven
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.Guid TipoEventoID, byte[] Descripcion, System.Guid Original_TipoEventoID, byte[] Original_Descripcion) {
+        public virtual int Update(System.Guid TipoEventoID, string Descripcion, System.Guid Original_TipoEventoID, string Original_Descripcion) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((System.Guid)(TipoEventoID));
             if ((Descripcion == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((byte[])(Descripcion));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Descripcion));
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((System.Guid)(Original_TipoEventoID));
             if ((Original_Descripcion == null)) {
@@ -952,7 +950,7 @@ SELECT TipoEventoID, Descripcion FROM TipoEvento WHERE (TipoEventoID = @TipoEven
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((byte[])(Original_Descripcion));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Descripcion));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -974,7 +972,7 @@ SELECT TipoEventoID, Descripcion FROM TipoEvento WHERE (TipoEventoID = @TipoEven
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(byte[] Descripcion, System.Guid Original_TipoEventoID, byte[] Original_Descripcion) {
+        public virtual int Update(string Descripcion, System.Guid Original_TipoEventoID, string Original_Descripcion) {
             return this.Update(Original_TipoEventoID, Descripcion, Original_TipoEventoID, Original_Descripcion);
         }
         
@@ -982,16 +980,15 @@ SELECT TipoEventoID, Descripcion FROM TipoEvento WHERE (TipoEventoID = @TipoEven
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int Actualizar(byte[] Descripcion, System.Guid Original_TipoEventoID, System.Guid TipoEventoID) {
+        public virtual int Actualizar(string Descripcion, System.Guid TipoEventoID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((Descripcion == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[0].Value = ((byte[])(Descripcion));
+                command.Parameters[0].Value = ((string)(Descripcion));
             }
-            command.Parameters[1].Value = ((System.Guid)(Original_TipoEventoID));
-            command.Parameters[2].Value = ((System.Guid)(TipoEventoID));
+            command.Parameters[1].Value = ((System.Guid)(TipoEventoID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

@@ -20,17 +20,17 @@ namespace Data.Maestro {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DSDisponibilidadMaestro")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Departamento")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DSDisponibilidadMaestro : global::System.Data.DataSet {
+    public partial class DSDepartamento : global::System.Data.DataSet {
         
-        private DisponibilidadMaestroDataTable tableDisponibilidadMaestro;
+        private DepartamentoDataTable tableDepartamento;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DSDisponibilidadMaestro() {
+        public DSDepartamento() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Data.Maestro {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected DSDisponibilidadMaestro(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DSDepartamento(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Data.Maestro {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["DisponibilidadMaestro"] != null)) {
-                    base.Tables.Add(new DisponibilidadMaestroDataTable(ds.Tables["DisponibilidadMaestro"]));
+                if ((ds.Tables["Departamento"] != null)) {
+                    base.Tables.Add(new DepartamentoDataTable(ds.Tables["Departamento"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Data.Maestro {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DisponibilidadMaestroDataTable DisponibilidadMaestro {
+        public DepartamentoDataTable _Departamento {
             get {
-                return this.tableDisponibilidadMaestro;
+                return this.tableDepartamento;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Data.Maestro {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DSDisponibilidadMaestro cln = ((DSDisponibilidadMaestro)(base.Clone()));
+            DSDepartamento cln = ((DSDepartamento)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Data.Maestro {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["DisponibilidadMaestro"] != null)) {
-                    base.Tables.Add(new DisponibilidadMaestroDataTable(ds.Tables["DisponibilidadMaestro"]));
+                if ((ds.Tables["Departamento"] != null)) {
+                    base.Tables.Add(new DepartamentoDataTable(ds.Tables["Departamento"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Data.Maestro {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDisponibilidadMaestro = ((DisponibilidadMaestroDataTable)(base.Tables["DisponibilidadMaestro"]));
+            this.tableDepartamento = ((DepartamentoDataTable)(base.Tables["Departamento"]));
             if ((initTable == true)) {
-                if ((this.tableDisponibilidadMaestro != null)) {
-                    this.tableDisponibilidadMaestro.InitVars();
+                if ((this.tableDepartamento != null)) {
+                    this.tableDepartamento.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Data.Maestro {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DSDisponibilidadMaestro";
+            this.DataSetName = "Departamento";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DSDisponibilidadMaestro.xsd";
+            this.Namespace = "http://tempuri.org/Departamento.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDisponibilidadMaestro = new DisponibilidadMaestroDataTable();
-            base.Tables.Add(this.tableDisponibilidadMaestro);
+            this.tableDepartamento = new DepartamentoDataTable();
+            base.Tables.Add(this.tableDepartamento);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeDisponibilidadMaestro() {
+        private bool ShouldSerialize_Departamento() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Data.Maestro {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DSDisponibilidadMaestro ds = new DSDisponibilidadMaestro();
+            DSDepartamento ds = new DSDepartamento();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,23 @@ namespace Data.Maestro {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void DisponibilidadMaestroRowChangeEventHandler(object sender, DisponibilidadMaestroRowChangeEvent e);
+        public delegate void DepartamentoRowChangeEventHandler(object sender, DepartamentoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DisponibilidadMaestroDataTable : global::System.Data.TypedTableBase<DisponibilidadMaestroRow> {
+        public partial class DepartamentoDataTable : global::System.Data.TypedTableBase<DepartamentoRow> {
             
-            private global::System.Data.DataColumn columnDisponibilidadID;
+            private global::System.Data.DataColumn columnDepartamentoID;
             
-            private global::System.Data.DataColumn columnMatricula;
-            
-            private global::System.Data.DataColumn columnFecha;
-            
-            private global::System.Data.DataColumn columnHora;
+            private global::System.Data.DataColumn columnDescripcion;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DisponibilidadMaestroDataTable() {
-                this.TableName = "DisponibilidadMaestro";
+            public DepartamentoDataTable() {
+                this.TableName = "Departamento";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +294,7 @@ namespace Data.Maestro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DisponibilidadMaestroDataTable(global::System.Data.DataTable table) {
+            internal DepartamentoDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,40 +311,24 @@ namespace Data.Maestro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected DisponibilidadMaestroDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DepartamentoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DisponibilidadIDColumn {
+            public global::System.Data.DataColumn DepartamentoIDColumn {
                 get {
-                    return this.columnDisponibilidadID;
+                    return this.columnDepartamentoID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MatriculaColumn {
+            public global::System.Data.DataColumn DescripcionColumn {
                 get {
-                    return this.columnMatricula;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FechaColumn {
-                get {
-                    return this.columnFecha;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn HoraColumn {
-                get {
-                    return this.columnHora;
+                    return this.columnDescripcion;
                 }
             }
             
@@ -363,55 +343,53 @@ namespace Data.Maestro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DisponibilidadMaestroRow this[int index] {
+            public DepartamentoRow this[int index] {
                 get {
-                    return ((DisponibilidadMaestroRow)(this.Rows[index]));
+                    return ((DepartamentoRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DisponibilidadMaestroRowChangeEventHandler DisponibilidadMaestroRowChanging;
+            public event DepartamentoRowChangeEventHandler DepartamentoRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DisponibilidadMaestroRowChangeEventHandler DisponibilidadMaestroRowChanged;
+            public event DepartamentoRowChangeEventHandler DepartamentoRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DisponibilidadMaestroRowChangeEventHandler DisponibilidadMaestroRowDeleting;
+            public event DepartamentoRowChangeEventHandler DepartamentoRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DisponibilidadMaestroRowChangeEventHandler DisponibilidadMaestroRowDeleted;
+            public event DepartamentoRowChangeEventHandler DepartamentoRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddDisponibilidadMaestroRow(DisponibilidadMaestroRow row) {
+            public void AddDepartamentoRow(DepartamentoRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DisponibilidadMaestroRow AddDisponibilidadMaestroRow(System.Guid DisponibilidadID, string Matricula, string Fecha, string Hora) {
-                DisponibilidadMaestroRow rowDisponibilidadMaestroRow = ((DisponibilidadMaestroRow)(this.NewRow()));
+            public DepartamentoRow AddDepartamentoRow(int DepartamentoID, string Descripcion) {
+                DepartamentoRow rowDepartamentoRow = ((DepartamentoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        DisponibilidadID,
-                        Matricula,
-                        Fecha,
-                        Hora};
-                rowDisponibilidadMaestroRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDisponibilidadMaestroRow);
-                return rowDisponibilidadMaestroRow;
+                        DepartamentoID,
+                        Descripcion};
+                rowDepartamentoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDepartamentoRow);
+                return rowDepartamentoRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DisponibilidadMaestroRow FindByDisponibilidadID(System.Guid DisponibilidadID) {
-                return ((DisponibilidadMaestroRow)(this.Rows.Find(new object[] {
-                            DisponibilidadID})));
+            public DepartamentoRow FindByDepartamentoID(int DepartamentoID) {
+                return ((DepartamentoRow)(this.Rows.Find(new object[] {
+                            DepartamentoID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DisponibilidadMaestroDataTable cln = ((DisponibilidadMaestroDataTable)(base.Clone()));
+                DepartamentoDataTable cln = ((DepartamentoDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -419,64 +397,57 @@ namespace Data.Maestro {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DisponibilidadMaestroDataTable();
+                return new DepartamentoDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnDisponibilidadID = base.Columns["DisponibilidadID"];
-                this.columnMatricula = base.Columns["Matricula"];
-                this.columnFecha = base.Columns["Fecha"];
-                this.columnHora = base.Columns["Hora"];
+                this.columnDepartamentoID = base.Columns["DepartamentoID"];
+                this.columnDescripcion = base.Columns["Descripcion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnDisponibilidadID = new global::System.Data.DataColumn("DisponibilidadID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDisponibilidadID);
-                this.columnMatricula = new global::System.Data.DataColumn("Matricula", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMatricula);
-                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFecha);
-                this.columnHora = new global::System.Data.DataColumn("Hora", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHora);
+                this.columnDepartamentoID = new global::System.Data.DataColumn("DepartamentoID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDepartamentoID);
+                this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescripcion);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnDisponibilidadID}, true));
-                this.columnDisponibilidadID.AllowDBNull = false;
-                this.columnDisponibilidadID.Unique = true;
-                this.columnMatricula.AllowDBNull = false;
-                this.columnMatricula.MaxLength = 50;
-                this.columnFecha.AllowDBNull = false;
-                this.columnFecha.MaxLength = 50;
-                this.columnHora.MaxLength = 50;
+                                this.columnDepartamentoID}, true));
+                this.columnDepartamentoID.AllowDBNull = false;
+                this.columnDepartamentoID.Unique = true;
+                this.columnDescripcion.AllowDBNull = false;
+                this.columnDescripcion.MaxLength = 50;
+                this.ExtendedProperties.Add("Generator_TablePropName", "_Departamento");
+                this.ExtendedProperties.Add("Generator_UserTableName", "Departamento");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DisponibilidadMaestroRow NewDisponibilidadMaestroRow() {
-                return ((DisponibilidadMaestroRow)(this.NewRow()));
+            public DepartamentoRow NewDepartamentoRow() {
+                return ((DepartamentoRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DisponibilidadMaestroRow(builder);
+                return new DepartamentoRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DisponibilidadMaestroRow);
+                return typeof(DepartamentoRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DisponibilidadMaestroRowChanged != null)) {
-                    this.DisponibilidadMaestroRowChanged(this, new DisponibilidadMaestroRowChangeEvent(((DisponibilidadMaestroRow)(e.Row)), e.Action));
+                if ((this.DepartamentoRowChanged != null)) {
+                    this.DepartamentoRowChanged(this, new DepartamentoRowChangeEvent(((DepartamentoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -484,8 +455,8 @@ namespace Data.Maestro {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DisponibilidadMaestroRowChanging != null)) {
-                    this.DisponibilidadMaestroRowChanging(this, new DisponibilidadMaestroRowChangeEvent(((DisponibilidadMaestroRow)(e.Row)), e.Action));
+                if ((this.DepartamentoRowChanging != null)) {
+                    this.DepartamentoRowChanging(this, new DepartamentoRowChangeEvent(((DepartamentoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -493,8 +464,8 @@ namespace Data.Maestro {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DisponibilidadMaestroRowDeleted != null)) {
-                    this.DisponibilidadMaestroRowDeleted(this, new DisponibilidadMaestroRowChangeEvent(((DisponibilidadMaestroRow)(e.Row)), e.Action));
+                if ((this.DepartamentoRowDeleted != null)) {
+                    this.DepartamentoRowDeleted(this, new DepartamentoRowChangeEvent(((DepartamentoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -502,14 +473,14 @@ namespace Data.Maestro {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DisponibilidadMaestroRowDeleting != null)) {
-                    this.DisponibilidadMaestroRowDeleting(this, new DisponibilidadMaestroRowChangeEvent(((DisponibilidadMaestroRow)(e.Row)), e.Action));
+                if ((this.DepartamentoRowDeleting != null)) {
+                    this.DepartamentoRowDeleting(this, new DepartamentoRowChangeEvent(((DepartamentoRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveDisponibilidadMaestroRow(DisponibilidadMaestroRow row) {
+            public void RemoveDepartamentoRow(DepartamentoRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -518,7 +489,7 @@ namespace Data.Maestro {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DSDisponibilidadMaestro ds = new DSDisponibilidadMaestro();
+                DSDepartamento ds = new DSDepartamento();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -536,7 +507,7 @@ namespace Data.Maestro {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DisponibilidadMaestroDataTable";
+                attribute2.FixedValue = "DepartamentoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -580,76 +551,37 @@ namespace Data.Maestro {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DisponibilidadMaestroRow : global::System.Data.DataRow {
+        public partial class DepartamentoRow : global::System.Data.DataRow {
             
-            private DisponibilidadMaestroDataTable tableDisponibilidadMaestro;
+            private DepartamentoDataTable tableDepartamento;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DisponibilidadMaestroRow(global::System.Data.DataRowBuilder rb) : 
+            internal DepartamentoRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDisponibilidadMaestro = ((DisponibilidadMaestroDataTable)(this.Table));
+                this.tableDepartamento = ((DepartamentoDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.Guid DisponibilidadID {
+            public int DepartamentoID {
                 get {
-                    return ((global::System.Guid)(this[this.tableDisponibilidadMaestro.DisponibilidadIDColumn]));
+                    return ((int)(this[this.tableDepartamento.DepartamentoIDColumn]));
                 }
                 set {
-                    this[this.tableDisponibilidadMaestro.DisponibilidadIDColumn] = value;
+                    this[this.tableDepartamento.DepartamentoIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Matricula {
+            public string Descripcion {
                 get {
-                    return ((string)(this[this.tableDisponibilidadMaestro.MatriculaColumn]));
+                    return ((string)(this[this.tableDepartamento.DescripcionColumn]));
                 }
                 set {
-                    this[this.tableDisponibilidadMaestro.MatriculaColumn] = value;
+                    this[this.tableDepartamento.DescripcionColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Fecha {
-                get {
-                    return ((string)(this[this.tableDisponibilidadMaestro.FechaColumn]));
-                }
-                set {
-                    this[this.tableDisponibilidadMaestro.FechaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Hora {
-                get {
-                    try {
-                        return ((string)(this[this.tableDisponibilidadMaestro.HoraColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Hora\' in table \'DisponibilidadMaestro\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDisponibilidadMaestro.HoraColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsHoraNull() {
-                return this.IsNull(this.tableDisponibilidadMaestro.HoraColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetHoraNull() {
-                this[this.tableDisponibilidadMaestro.HoraColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -657,22 +589,22 @@ namespace Data.Maestro {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class DisponibilidadMaestroRowChangeEvent : global::System.EventArgs {
+        public class DepartamentoRowChangeEvent : global::System.EventArgs {
             
-            private DisponibilidadMaestroRow eventRow;
+            private DepartamentoRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DisponibilidadMaestroRowChangeEvent(DisponibilidadMaestroRow row, global::System.Data.DataRowAction action) {
+            public DepartamentoRowChangeEvent(DepartamentoRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DisponibilidadMaestroRow Row {
+            public DepartamentoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -688,7 +620,7 @@ namespace Data.Maestro {
         }
     }
 }
-namespace Data.Maestro.DSDisponibilidadMaestroTableAdapters {
+namespace Data.Maestro.DepartamentoTableAdapters {
     
     
     /// <summary>
@@ -700,7 +632,7 @@ namespace Data.Maestro.DSDisponibilidadMaestroTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DisponibilidadMaestroTableAdapter : global::System.ComponentModel.Component {
+    public partial class DepartamentoTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -714,7 +646,7 @@ namespace Data.Maestro.DSDisponibilidadMaestroTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DisponibilidadMaestroTableAdapter() {
+        public DepartamentoTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -811,46 +743,34 @@ namespace Data.Maestro.DSDisponibilidadMaestroTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DisponibilidadMaestro";
-            tableMapping.ColumnMappings.Add("DisponibilidadID", "DisponibilidadID");
-            tableMapping.ColumnMappings.Add("Matricula", "Matricula");
-            tableMapping.ColumnMappings.Add("Fecha", "Fecha");
-            tableMapping.ColumnMappings.Add("Hora", "Hora");
+            tableMapping.DataSetTable = "Departamento";
+            tableMapping.ColumnMappings.Add("DepartamentoID", "DepartamentoID");
+            tableMapping.ColumnMappings.Add("Descripcion", "Descripcion");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [DisponibilidadMaestro] WHERE (([DisponibilidadID] = @Original_Dispon" +
-                "ibilidadID) AND ([Matricula] = @Original_Matricula) AND ([Fecha] = @Original_Fec" +
-                "ha) AND ((@IsNull_Hora = 1 AND [Hora] IS NULL) OR ([Hora] = @Original_Hora)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Departamento] WHERE (([DepartamentoID] = @Original_DepartamentoID) A" +
+                "ND ([Descripcion] = @Original_Descripcion))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DisponibilidadID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DisponibilidadID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Matricula", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Matricula", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Hora", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Hora", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepartamentoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartamentoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [DisponibilidadMaestro] ([DisponibilidadID], [Matricula], [Fecha], [Hora]) VALUES (@DisponibilidadID, @Matricula, @Fecha, @Hora);
-SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE (DisponibilidadID = @DisponibilidadID)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Departamento] ([DepartamentoID], [Descripcion]) VALUES (@Departament" +
+                "oID, @Descripcion);\r\nSELECT DepartamentoID, Descripcion FROM Departamento WHERE " +
+                "(DepartamentoID = @DepartamentoID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DisponibilidadID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DisponibilidadID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Matricula", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Matricula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hora", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartamentoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartamentoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [DisponibilidadMaestro] SET [DisponibilidadID] = @DisponibilidadID, [Matricula] = @Matricula, [Fecha] = @Fecha, [Hora] = @Hora WHERE (([DisponibilidadID] = @Original_DisponibilidadID) AND ([Matricula] = @Original_Matricula) AND ([Fecha] = @Original_Fecha) AND ((@IsNull_Hora = 1 AND [Hora] IS NULL) OR ([Hora] = @Original_Hora)));
-SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE (DisponibilidadID = @DisponibilidadID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Departamento] SET [DepartamentoID] = @DepartamentoID, [Descripcion] = @Descripcion WHERE (([DepartamentoID] = @Original_DepartamentoID) AND ([Descripcion] = @Original_Descripcion));
+SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @DepartamentoID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DisponibilidadID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DisponibilidadID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Matricula", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Matricula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hora", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DisponibilidadID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DisponibilidadID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Matricula", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Matricula", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Hora", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Hora", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartamentoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartamentoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepartamentoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartamentoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -863,39 +783,31 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        DisponibilidadID, Matricula, Fecha, Hora\r\nFROM            Disponibi" +
-                "lidadMaestro";
+            this._commandCollection[0].CommandText = "SELECT        DepartamentoID, Descripcion\r\nFROM            Departamento";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"UPDATE [DisponibilidadMaestro] SET [Matricula] = @Matricula, [Fecha] = @Fecha, [Hora] = @Hora WHERE (DisponibilidadID = @DisponibilidadID);
-SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE (DisponibilidadID = @DisponibilidadID)";
+            this._commandCollection[1].CommandText = "UPDATE [Departamento] SET [Descripcion] = @Descripcion WHERE ([DepartamentoID] = " +
+                "@DepartamentoID);\r\nSELECT DepartamentoID, Descripcion FROM Departamento WHERE (D" +
+                "epartamentoID = @DepartamentoID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Matricula", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Matricula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hora", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DisponibilidadID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, "DisponibilidadID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartamentoID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DepartamentoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "DELETE FROM [DisponibilidadMaestro] WHERE (DisponibilidadID = @DisponibilidadID)";
+            this._commandCollection[2].CommandText = "DELETE FROM [Departamento] WHERE ([DepartamentoID] = @DepartamentoID)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DisponibilidadID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, "DisponibilidadID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT        DisponibilidadID, Matricula, Fecha, Hora\r\nFROM            Disponibi" +
-                "lidadMaestro\r\nWHERE        (Matricula = @Matricula)";
-            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Matricula", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Matricula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartamentoID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DepartamentoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DSDisponibilidadMaestro.DisponibilidadMaestroDataTable dataTable) {
+        public virtual int Fill(DSDepartamento.DepartamentoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -908,9 +820,9 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DSDisponibilidadMaestro.DisponibilidadMaestroDataTable GetData() {
+        public virtual DSDepartamento.DepartamentoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DSDisponibilidadMaestro.DisponibilidadMaestroDataTable dataTable = new DSDisponibilidadMaestro.DisponibilidadMaestroDataTable();
+            DSDepartamento.DepartamentoDataTable dataTable = new DSDepartamento.DepartamentoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -918,51 +830,15 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByMatricula(DSDisponibilidadMaestro.DisponibilidadMaestroDataTable dataTable, string Matricula) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
-            if ((Matricula == null)) {
-                throw new global::System.ArgumentNullException("Matricula");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Matricula));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DSDisponibilidadMaestro.DisponibilidadMaestroDataTable GetDataByMatricula(string Matricula) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
-            if ((Matricula == null)) {
-                throw new global::System.ArgumentNullException("Matricula");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Matricula));
-            }
-            DSDisponibilidadMaestro.DisponibilidadMaestroDataTable dataTable = new DSDisponibilidadMaestro.DisponibilidadMaestroDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DSDisponibilidadMaestro.DisponibilidadMaestroDataTable dataTable) {
+        public virtual int Update(DSDepartamento.DepartamentoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DSDisponibilidadMaestro dataSet) {
-            return this.Adapter.Update(dataSet, "DisponibilidadMaestro");
+        public virtual int Update(DSDepartamento dataSet) {
+            return this.Adapter.Update(dataSet, "Departamento");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -984,27 +860,13 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(System.Guid Original_DisponibilidadID, string Original_Matricula, string Original_Fecha, string Original_Hora) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((System.Guid)(Original_DisponibilidadID));
-            if ((Original_Matricula == null)) {
-                throw new global::System.ArgumentNullException("Original_Matricula");
+        public virtual int Delete(int Original_DepartamentoID, string Original_Descripcion) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_DepartamentoID));
+            if ((Original_Descripcion == null)) {
+                throw new global::System.ArgumentNullException("Original_Descripcion");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Matricula));
-            }
-            if ((Original_Fecha == null)) {
-                throw new global::System.ArgumentNullException("Original_Fecha");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Fecha));
-            }
-            if ((Original_Hora == null)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Hora));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Descripcion));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1026,25 +888,13 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.Guid DisponibilidadID, string Matricula, string Fecha, string Hora) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((System.Guid)(DisponibilidadID));
-            if ((Matricula == null)) {
-                throw new global::System.ArgumentNullException("Matricula");
+        public virtual int Insert(int DepartamentoID, string Descripcion) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(DepartamentoID));
+            if ((Descripcion == null)) {
+                throw new global::System.ArgumentNullException("Descripcion");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Matricula));
-            }
-            if ((Fecha == null)) {
-                throw new global::System.ArgumentNullException("Fecha");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Fecha));
-            }
-            if ((Hora == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Hora));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Descripcion));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1066,46 +916,20 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.Guid DisponibilidadID, string Matricula, string Fecha, string Hora, System.Guid Original_DisponibilidadID, string Original_Matricula, string Original_Fecha, string Original_Hora) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.Guid)(DisponibilidadID));
-            if ((Matricula == null)) {
-                throw new global::System.ArgumentNullException("Matricula");
+        public virtual int Update(int DepartamentoID, string Descripcion, int Original_DepartamentoID, string Original_Descripcion) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(DepartamentoID));
+            if ((Descripcion == null)) {
+                throw new global::System.ArgumentNullException("Descripcion");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Matricula));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Descripcion));
             }
-            if ((Fecha == null)) {
-                throw new global::System.ArgumentNullException("Fecha");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Fecha));
-            }
-            if ((Hora == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_DepartamentoID));
+            if ((Original_Descripcion == null)) {
+                throw new global::System.ArgumentNullException("Original_Descripcion");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Hora));
-            }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.Guid)(Original_DisponibilidadID));
-            if ((Original_Matricula == null)) {
-                throw new global::System.ArgumentNullException("Original_Matricula");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Matricula));
-            }
-            if ((Original_Fecha == null)) {
-                throw new global::System.ArgumentNullException("Original_Fecha");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Fecha));
-            }
-            if ((Original_Hora == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Hora));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Descripcion));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1127,35 +951,23 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Matricula, string Fecha, string Hora, System.Guid Original_DisponibilidadID, string Original_Matricula, string Original_Fecha, string Original_Hora) {
-            return this.Update(Original_DisponibilidadID, Matricula, Fecha, Hora, Original_DisponibilidadID, Original_Matricula, Original_Fecha, Original_Hora);
+        public virtual int Update(string Descripcion, int Original_DepartamentoID, string Original_Descripcion) {
+            return this.Update(Original_DepartamentoID, Descripcion, Original_DepartamentoID, Original_Descripcion);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int Actualizar(string Matricula, string Fecha, string Hora, System.Guid DisponibilidadID) {
+        public virtual int Actualizar(string Descripcion, int DepartamentoID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            if ((Matricula == null)) {
-                throw new global::System.ArgumentNullException("Matricula");
+            if ((Descripcion == null)) {
+                throw new global::System.ArgumentNullException("Descripcion");
             }
             else {
-                command.Parameters[0].Value = ((string)(Matricula));
+                command.Parameters[0].Value = ((string)(Descripcion));
             }
-            if ((Fecha == null)) {
-                command.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[1].Value = ((string)(Fecha));
-            }
-            if ((Hora == null)) {
-                command.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[2].Value = ((string)(Hora));
-            }
-            command.Parameters[3].Value = ((System.Guid)(DisponibilidadID));
+            command.Parameters[1].Value = ((int)(DepartamentoID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1177,9 +989,9 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
-        public virtual int Eliminar(System.Guid DisponibilidadID) {
+        public virtual int Delete1(int DepartamentoID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
-            command.Parameters[0].Value = ((System.Guid)(DisponibilidadID));
+            command.Parameters[0].Value = ((int)(DepartamentoID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1210,7 +1022,7 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
         
         private UpdateOrderOption _updateOrder;
         
-        private DisponibilidadMaestroTableAdapter _disponibilidadMaestroTableAdapter;
+        private DepartamentoTableAdapter _departamentoTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1232,12 +1044,12 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public DisponibilidadMaestroTableAdapter DisponibilidadMaestroTableAdapter {
+        public DepartamentoTableAdapter DepartamentoTableAdapter {
             get {
-                return this._disponibilidadMaestroTableAdapter;
+                return this._departamentoTableAdapter;
             }
             set {
-                this._disponibilidadMaestroTableAdapter = value;
+                this._departamentoTableAdapter = value;
             }
         }
         
@@ -1260,9 +1072,9 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._disponibilidadMaestroTableAdapter != null) 
-                            && (this._disponibilidadMaestroTableAdapter.Connection != null))) {
-                    return this._disponibilidadMaestroTableAdapter.Connection;
+                if (((this._departamentoTableAdapter != null) 
+                            && (this._departamentoTableAdapter.Connection != null))) {
+                    return this._departamentoTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1277,7 +1089,7 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._disponibilidadMaestroTableAdapter != null)) {
+                if ((this._departamentoTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1289,14 +1101,14 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(DSDisponibilidadMaestro dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DSDepartamento dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._disponibilidadMaestroTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.DisponibilidadMaestro.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._departamentoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet._Departamento.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._disponibilidadMaestroTableAdapter.Update(updatedRows));
+                    result = (result + this._departamentoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1308,13 +1120,13 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(DSDisponibilidadMaestro dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DSDepartamento dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._disponibilidadMaestroTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.DisponibilidadMaestro.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._departamentoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet._Departamento.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._disponibilidadMaestroTableAdapter.Update(addedRows));
+                    result = (result + this._departamentoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1326,13 +1138,13 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(DSDisponibilidadMaestro dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DSDepartamento dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._disponibilidadMaestroTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.DisponibilidadMaestro.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._departamentoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet._Departamento.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._disponibilidadMaestroTableAdapter.Update(deletedRows));
+                    result = (result + this._departamentoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1368,15 +1180,15 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(DSDisponibilidadMaestro dataSet) {
+        public virtual int UpdateAll(DSDepartamento dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._disponibilidadMaestroTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._disponibilidadMaestroTableAdapter.Connection) == false))) {
+            if (((this._departamentoTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._departamentoTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1412,13 +1224,13 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._disponibilidadMaestroTableAdapter != null)) {
-                    revertConnections.Add(this._disponibilidadMaestroTableAdapter, this._disponibilidadMaestroTableAdapter.Connection);
-                    this._disponibilidadMaestroTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._disponibilidadMaestroTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._disponibilidadMaestroTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._disponibilidadMaestroTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._disponibilidadMaestroTableAdapter.Adapter);
+                if ((this._departamentoTableAdapter != null)) {
+                    revertConnections.Add(this._departamentoTableAdapter, this._departamentoTableAdapter.Connection);
+                    this._departamentoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._departamentoTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._departamentoTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._departamentoTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._departamentoTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1479,9 +1291,9 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._disponibilidadMaestroTableAdapter != null)) {
-                    this._disponibilidadMaestroTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._disponibilidadMaestroTableAdapter]));
-                    this._disponibilidadMaestroTableAdapter.Transaction = null;
+                if ((this._departamentoTableAdapter != null)) {
+                    this._departamentoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._departamentoTableAdapter]));
+                    this._departamentoTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

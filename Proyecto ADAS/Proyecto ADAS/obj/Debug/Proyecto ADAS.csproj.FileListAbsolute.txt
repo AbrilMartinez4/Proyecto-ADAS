@@ -66,3 +66,5 @@ C:\Users\UsuarioLocal\Desktop\Proyecto-ADAS\Proyecto ADAS\Proyecto ADAS\obj\Debu
 C:\Users\UsuarioLocal\Desktop\Proyecto-ADAS\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto_ADAS.Properties.Resources.resources
 C:\Users\UsuarioLocal\Desktop\Proyecto-ADAS\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto ADAS.csproj.GenerateResource.Cache
 C:\Users\UsuarioLocal\Desktop\Proyecto-ADAS\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto ADAS.exe.licenses
+C:\Users\UsuarioLocal\Desktop\Adas\Proyecto-ADAS\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto ADAS.exe
+C:\Users\UsuarioLocal\Desktop\Adas\Proyecto-ADAS\Proyecto ADAS\Proyecto ADAS\obj\Debug\Proyecto ADAS.pdb

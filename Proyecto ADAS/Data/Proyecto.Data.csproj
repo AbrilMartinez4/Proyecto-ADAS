@@ -55,10 +55,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TipoEvento.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Maestro\Departamento.Designer.cs">
+    <Compile Include="MaestroEvento\MaestroEventoVW.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Departamento.xsd</DependentUpon>
+      <DependentUpon>MaestroEventoVW.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Maestro\DSDepartamento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSDepartamento.xsd</DependentUpon>
     </Compile>
     <Compile Include="Maestro\DSDisponibilidadMaestro.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -122,16 +127,27 @@
     <None Include="Evento\TipoEvento.xss">
       <DependentUpon>TipoEvento.xsd</DependentUpon>
     </None>
-    <None Include="Maestro\Departamento.xsc">
-      <DependentUpon>Departamento.xsd</DependentUpon>
+    <None Include="MaestroEvento\MaestroEventoVW.xsc">
+      <DependentUpon>MaestroEventoVW.xsd</DependentUpon>
     </None>
-    <None Include="Maestro\Departamento.xsd">
+    <None Include="MaestroEvento\MaestroEventoVW.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Departamento.Designer.cs</LastGenOutput>
+      <LastGenOutput>MaestroEventoVW.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Maestro\Departamento.xss">
-      <DependentUpon>Departamento.xsd</DependentUpon>
+    <None Include="MaestroEvento\MaestroEventoVW.xss">
+      <DependentUpon>MaestroEventoVW.xsd</DependentUpon>
+    </None>
+    <None Include="Maestro\DSDepartamento.xsc">
+      <DependentUpon>DSDepartamento.xsd</DependentUpon>
+    </None>
+    <None Include="Maestro\DSDepartamento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSDepartamento.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Maestro\DSDepartamento.xss">
+      <DependentUpon>DSDepartamento.xsd</DependentUpon>
     </None>
     <None Include="Maestro\DSDisponibilidadMaestro.xsc">
       <DependentUpon>DSDisponibilidadMaestro.xsd</DependentUpon>

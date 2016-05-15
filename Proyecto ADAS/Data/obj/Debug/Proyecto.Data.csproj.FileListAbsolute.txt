@@ -4,3 +4,9 @@ C:\Users\UsuarioLocal\Desktop\Proyecto-ADAS\Proyecto ADAS\Data\bin\Debug\Data.pd
 C:\Users\UsuarioLocal\Desktop\Proyecto-ADAS\Proyecto ADAS\Data\obj\Debug\Proyecto.Data.csprojResolveAssemblyReference.cache
 C:\Users\UsuarioLocal\Desktop\Proyecto-ADAS\Proyecto ADAS\Data\obj\Debug\Data.dll
 C:\Users\UsuarioLocal\Desktop\Proyecto-ADAS\Proyecto ADAS\Data\obj\Debug\Data.pdb
+C:\Users\UsuarioLocal\Desktop\Adas\Proyecto-ADAS\Proyecto ADAS\Data\bin\Debug\Data.dll.config
+C:\Users\UsuarioLocal\Desktop\Adas\Proyecto-ADAS\Proyecto ADAS\Data\bin\Debug\Data.dll
+C:\Users\UsuarioLocal\Desktop\Adas\Proyecto-ADAS\Proyecto ADAS\Data\bin\Debug\Data.pdb
+C:\Users\UsuarioLocal\Desktop\Adas\Proyecto-ADAS\Proyecto ADAS\Data\obj\Debug\Proyecto.Data.csprojResolveAssemblyReference.cache
+C:\Users\UsuarioLocal\Desktop\Adas\Proyecto-ADAS\Proyecto ADAS\Data\obj\Debug\Data.dll
+C:\Users\UsuarioLocal\Desktop\Adas\Proyecto-ADAS\Proyecto ADAS\Data\obj\Debug\Data.pdb

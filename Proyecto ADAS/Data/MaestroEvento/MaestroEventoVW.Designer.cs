@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Data.Maestro {
+namespace Data.MaestroEvento {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace Data.Maestro {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Departamento")]
+    [global::System.Xml.Serialization.XmlRootAttribute("MaestroEventoVW")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Departamento : global::System.Data.DataSet {
+    public partial class MaestroEventoVW : global::System.Data.DataSet {
         
-        private DepartamentoDataTable tableDepartamento;
+        private MaestroEventoVWDataTable tableMaestroEventoVW;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Departamento() {
+        public MaestroEventoVW() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Data.Maestro {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected Departamento(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected MaestroEventoVW(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Data.Maestro {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Departamento"] != null)) {
-                    base.Tables.Add(new DepartamentoDataTable(ds.Tables["Departamento"]));
+                if ((ds.Tables["MaestroEventoVW"] != null)) {
+                    base.Tables.Add(new MaestroEventoVWDataTable(ds.Tables["MaestroEventoVW"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Data.Maestro {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DepartamentoDataTable _Departamento {
+        public MaestroEventoVWDataTable _MaestroEventoVW {
             get {
-                return this.tableDepartamento;
+                return this.tableMaestroEventoVW;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Data.Maestro {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            Departamento cln = ((Departamento)(base.Clone()));
+            MaestroEventoVW cln = ((MaestroEventoVW)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Data.Maestro {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Departamento"] != null)) {
-                    base.Tables.Add(new DepartamentoDataTable(ds.Tables["Departamento"]));
+                if ((ds.Tables["MaestroEventoVW"] != null)) {
+                    base.Tables.Add(new MaestroEventoVWDataTable(ds.Tables["MaestroEventoVW"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Data.Maestro {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDepartamento = ((DepartamentoDataTable)(base.Tables["Departamento"]));
+            this.tableMaestroEventoVW = ((MaestroEventoVWDataTable)(base.Tables["MaestroEventoVW"]));
             if ((initTable == true)) {
-                if ((this.tableDepartamento != null)) {
-                    this.tableDepartamento.InitVars();
+                if ((this.tableMaestroEventoVW != null)) {
+                    this.tableMaestroEventoVW.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Data.Maestro {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "Departamento";
+            this.DataSetName = "MaestroEventoVW";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Departamento.xsd";
+            this.Namespace = "http://tempuri.org/MaestroEventoVW.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDepartamento = new DepartamentoDataTable();
-            base.Tables.Add(this.tableDepartamento);
+            this.tableMaestroEventoVW = new MaestroEventoVWDataTable();
+            base.Tables.Add(this.tableMaestroEventoVW);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerialize_Departamento() {
+        private bool ShouldSerialize_MaestroEventoVW() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Data.Maestro {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            Departamento ds = new Departamento();
+            MaestroEventoVW ds = new MaestroEventoVW();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,23 +270,49 @@ namespace Data.Maestro {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void DepartamentoRowChangeEventHandler(object sender, DepartamentoRowChangeEvent e);
+        public delegate void MaestroEventoVWRowChangeEventHandler(object sender, MaestroEventoVWRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DepartamentoDataTable : global::System.Data.TypedTableBase<DepartamentoRow> {
+        public partial class MaestroEventoVWDataTable : global::System.Data.TypedTableBase<MaestroEventoVWRow> {
+            
+            private global::System.Data.DataColumn columnMatricula;
+            
+            private global::System.Data.DataColumn columnNombre;
+            
+            private global::System.Data.DataColumn columnApPaterno;
+            
+            private global::System.Data.DataColumn columnApMaterno;
             
             private global::System.Data.DataColumn columnDepartamentoID;
             
-            private global::System.Data.DataColumn columnDescripcion;
+            private global::System.Data.DataColumn columnDepartamentoDescripcion;
+            
+            private global::System.Data.DataColumn columnEventoID;
+            
+            private global::System.Data.DataColumn columnEventoDescripcion;
+            
+            private global::System.Data.DataColumn columnHora;
+            
+            private global::System.Data.DataColumn columnFecha;
+            
+            private global::System.Data.DataColumn columnUsuarioID;
+            
+            private global::System.Data.DataColumn columnTipoEventoID;
+            
+            private global::System.Data.DataColumn columnTipoEventoDescripcion;
+            
+            private global::System.Data.DataColumn columnLugarID;
+            
+            private global::System.Data.DataColumn columnLugarDescripcion;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DepartamentoDataTable() {
-                this.TableName = "Departamento";
+            public MaestroEventoVWDataTable() {
+                this.TableName = "MaestroEventoVW";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -294,7 +320,7 @@ namespace Data.Maestro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DepartamentoDataTable(global::System.Data.DataTable table) {
+            internal MaestroEventoVWDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -311,9 +337,41 @@ namespace Data.Maestro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected DepartamentoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected MaestroEventoVWDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MatriculaColumn {
+                get {
+                    return this.columnMatricula;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NombreColumn {
+                get {
+                    return this.columnNombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ApPaternoColumn {
+                get {
+                    return this.columnApPaterno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ApMaternoColumn {
+                get {
+                    return this.columnApMaterno;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -326,9 +384,81 @@ namespace Data.Maestro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DescripcionColumn {
+            public global::System.Data.DataColumn DepartamentoDescripcionColumn {
                 get {
-                    return this.columnDescripcion;
+                    return this.columnDepartamentoDescripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EventoIDColumn {
+                get {
+                    return this.columnEventoID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EventoDescripcionColumn {
+                get {
+                    return this.columnEventoDescripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn HoraColumn {
+                get {
+                    return this.columnHora;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FechaColumn {
+                get {
+                    return this.columnFecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn UsuarioIDColumn {
+                get {
+                    return this.columnUsuarioID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TipoEventoIDColumn {
+                get {
+                    return this.columnTipoEventoID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TipoEventoDescripcionColumn {
+                get {
+                    return this.columnTipoEventoDescripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LugarIDColumn {
+                get {
+                    return this.columnLugarID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LugarDescripcionColumn {
+                get {
+                    return this.columnLugarDescripcion;
                 }
             }
             
@@ -343,53 +473,59 @@ namespace Data.Maestro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DepartamentoRow this[int index] {
+            public MaestroEventoVWRow this[int index] {
                 get {
-                    return ((DepartamentoRow)(this.Rows[index]));
+                    return ((MaestroEventoVWRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DepartamentoRowChangeEventHandler DepartamentoRowChanging;
+            public event MaestroEventoVWRowChangeEventHandler MaestroEventoVWRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DepartamentoRowChangeEventHandler DepartamentoRowChanged;
+            public event MaestroEventoVWRowChangeEventHandler MaestroEventoVWRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DepartamentoRowChangeEventHandler DepartamentoRowDeleting;
+            public event MaestroEventoVWRowChangeEventHandler MaestroEventoVWRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DepartamentoRowChangeEventHandler DepartamentoRowDeleted;
+            public event MaestroEventoVWRowChangeEventHandler MaestroEventoVWRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddDepartamentoRow(DepartamentoRow row) {
+            public void AddMaestroEventoVWRow(MaestroEventoVWRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DepartamentoRow AddDepartamentoRow(int DepartamentoID, string Descripcion) {
-                DepartamentoRow rowDepartamentoRow = ((DepartamentoRow)(this.NewRow()));
+            public MaestroEventoVWRow AddMaestroEventoVWRow(string Matricula, string Nombre, string ApPaterno, string ApMaterno, int DepartamentoID, string DepartamentoDescripcion, System.Guid EventoID, string EventoDescripcion, string Hora, string Fecha, System.Guid UsuarioID, System.Guid TipoEventoID, string TipoEventoDescripcion, System.Guid LugarID, string LugarDescripcion) {
+                MaestroEventoVWRow rowMaestroEventoVWRow = ((MaestroEventoVWRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        Matricula,
+                        Nombre,
+                        ApPaterno,
+                        ApMaterno,
                         DepartamentoID,
-                        Descripcion};
-                rowDepartamentoRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDepartamentoRow);
-                return rowDepartamentoRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DepartamentoRow FindByDepartamentoID(int DepartamentoID) {
-                return ((DepartamentoRow)(this.Rows.Find(new object[] {
-                            DepartamentoID})));
+                        DepartamentoDescripcion,
+                        EventoID,
+                        EventoDescripcion,
+                        Hora,
+                        Fecha,
+                        UsuarioID,
+                        TipoEventoID,
+                        TipoEventoDescripcion,
+                        LugarID,
+                        LugarDescripcion};
+                rowMaestroEventoVWRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMaestroEventoVWRow);
+                return rowMaestroEventoVWRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DepartamentoDataTable cln = ((DepartamentoDataTable)(base.Clone()));
+                MaestroEventoVWDataTable cln = ((MaestroEventoVWDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -397,57 +533,111 @@ namespace Data.Maestro {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DepartamentoDataTable();
+                return new MaestroEventoVWDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
+                this.columnMatricula = base.Columns["Matricula"];
+                this.columnNombre = base.Columns["Nombre"];
+                this.columnApPaterno = base.Columns["ApPaterno"];
+                this.columnApMaterno = base.Columns["ApMaterno"];
                 this.columnDepartamentoID = base.Columns["DepartamentoID"];
-                this.columnDescripcion = base.Columns["Descripcion"];
+                this.columnDepartamentoDescripcion = base.Columns["DepartamentoDescripcion"];
+                this.columnEventoID = base.Columns["EventoID"];
+                this.columnEventoDescripcion = base.Columns["EventoDescripcion"];
+                this.columnHora = base.Columns["Hora"];
+                this.columnFecha = base.Columns["Fecha"];
+                this.columnUsuarioID = base.Columns["UsuarioID"];
+                this.columnTipoEventoID = base.Columns["TipoEventoID"];
+                this.columnTipoEventoDescripcion = base.Columns["TipoEventoDescripcion"];
+                this.columnLugarID = base.Columns["LugarID"];
+                this.columnLugarDescripcion = base.Columns["LugarDescripcion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
+                this.columnMatricula = new global::System.Data.DataColumn("Matricula", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMatricula);
+                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre);
+                this.columnApPaterno = new global::System.Data.DataColumn("ApPaterno", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnApPaterno);
+                this.columnApMaterno = new global::System.Data.DataColumn("ApMaterno", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnApMaterno);
                 this.columnDepartamentoID = new global::System.Data.DataColumn("DepartamentoID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDepartamentoID);
-                this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDescripcion);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnDepartamentoID}, true));
+                this.columnDepartamentoDescripcion = new global::System.Data.DataColumn("DepartamentoDescripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDepartamentoDescripcion);
+                this.columnEventoID = new global::System.Data.DataColumn("EventoID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEventoID);
+                this.columnEventoDescripcion = new global::System.Data.DataColumn("EventoDescripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEventoDescripcion);
+                this.columnHora = new global::System.Data.DataColumn("Hora", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHora);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha);
+                this.columnUsuarioID = new global::System.Data.DataColumn("UsuarioID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUsuarioID);
+                this.columnTipoEventoID = new global::System.Data.DataColumn("TipoEventoID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipoEventoID);
+                this.columnTipoEventoDescripcion = new global::System.Data.DataColumn("TipoEventoDescripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipoEventoDescripcion);
+                this.columnLugarID = new global::System.Data.DataColumn("LugarID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLugarID);
+                this.columnLugarDescripcion = new global::System.Data.DataColumn("LugarDescripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLugarDescripcion);
+                this.columnMatricula.AllowDBNull = false;
+                this.columnMatricula.MaxLength = 50;
+                this.columnNombre.AllowDBNull = false;
+                this.columnNombre.MaxLength = 50;
+                this.columnApPaterno.AllowDBNull = false;
+                this.columnApPaterno.MaxLength = 50;
+                this.columnApMaterno.MaxLength = 50;
                 this.columnDepartamentoID.AllowDBNull = false;
-                this.columnDepartamentoID.Unique = true;
-                this.columnDescripcion.AllowDBNull = false;
-                this.columnDescripcion.MaxLength = 50;
-                this.ExtendedProperties.Add("Generator_TablePropName", "_Departamento");
-                this.ExtendedProperties.Add("Generator_UserTableName", "Departamento");
+                this.columnDepartamentoDescripcion.AllowDBNull = false;
+                this.columnDepartamentoDescripcion.MaxLength = 50;
+                this.columnEventoID.AllowDBNull = false;
+                this.columnEventoDescripcion.AllowDBNull = false;
+                this.columnEventoDescripcion.MaxLength = 50;
+                this.columnHora.MaxLength = 50;
+                this.columnFecha.MaxLength = 50;
+                this.columnUsuarioID.AllowDBNull = false;
+                this.columnTipoEventoID.AllowDBNull = false;
+                this.columnTipoEventoDescripcion.MaxLength = 50;
+                this.columnLugarID.AllowDBNull = false;
+                this.columnLugarDescripcion.AllowDBNull = false;
+                this.columnLugarDescripcion.MaxLength = 50;
+                this.ExtendedProperties.Add("Generator_TablePropName", "_MaestroEventoVW");
+                this.ExtendedProperties.Add("Generator_UserTableName", "MaestroEventoVW");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DepartamentoRow NewDepartamentoRow() {
-                return ((DepartamentoRow)(this.NewRow()));
+            public MaestroEventoVWRow NewMaestroEventoVWRow() {
+                return ((MaestroEventoVWRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DepartamentoRow(builder);
+                return new MaestroEventoVWRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DepartamentoRow);
+                return typeof(MaestroEventoVWRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DepartamentoRowChanged != null)) {
-                    this.DepartamentoRowChanged(this, new DepartamentoRowChangeEvent(((DepartamentoRow)(e.Row)), e.Action));
+                if ((this.MaestroEventoVWRowChanged != null)) {
+                    this.MaestroEventoVWRowChanged(this, new MaestroEventoVWRowChangeEvent(((MaestroEventoVWRow)(e.Row)), e.Action));
                 }
             }
             
@@ -455,8 +645,8 @@ namespace Data.Maestro {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DepartamentoRowChanging != null)) {
-                    this.DepartamentoRowChanging(this, new DepartamentoRowChangeEvent(((DepartamentoRow)(e.Row)), e.Action));
+                if ((this.MaestroEventoVWRowChanging != null)) {
+                    this.MaestroEventoVWRowChanging(this, new MaestroEventoVWRowChangeEvent(((MaestroEventoVWRow)(e.Row)), e.Action));
                 }
             }
             
@@ -464,8 +654,8 @@ namespace Data.Maestro {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DepartamentoRowDeleted != null)) {
-                    this.DepartamentoRowDeleted(this, new DepartamentoRowChangeEvent(((DepartamentoRow)(e.Row)), e.Action));
+                if ((this.MaestroEventoVWRowDeleted != null)) {
+                    this.MaestroEventoVWRowDeleted(this, new MaestroEventoVWRowChangeEvent(((MaestroEventoVWRow)(e.Row)), e.Action));
                 }
             }
             
@@ -473,14 +663,14 @@ namespace Data.Maestro {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DepartamentoRowDeleting != null)) {
-                    this.DepartamentoRowDeleting(this, new DepartamentoRowChangeEvent(((DepartamentoRow)(e.Row)), e.Action));
+                if ((this.MaestroEventoVWRowDeleting != null)) {
+                    this.MaestroEventoVWRowDeleting(this, new MaestroEventoVWRowChangeEvent(((MaestroEventoVWRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveDepartamentoRow(DepartamentoRow row) {
+            public void RemoveMaestroEventoVWRow(MaestroEventoVWRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -489,7 +679,7 @@ namespace Data.Maestro {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Departamento ds = new Departamento();
+                MaestroEventoVW ds = new MaestroEventoVW();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -507,7 +697,7 @@ namespace Data.Maestro {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DepartamentoDataTable";
+                attribute2.FixedValue = "MaestroEventoVWDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -551,37 +741,249 @@ namespace Data.Maestro {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DepartamentoRow : global::System.Data.DataRow {
+        public partial class MaestroEventoVWRow : global::System.Data.DataRow {
             
-            private DepartamentoDataTable tableDepartamento;
+            private MaestroEventoVWDataTable tableMaestroEventoVW;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DepartamentoRow(global::System.Data.DataRowBuilder rb) : 
+            internal MaestroEventoVWRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDepartamento = ((DepartamentoDataTable)(this.Table));
+                this.tableMaestroEventoVW = ((MaestroEventoVWDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Matricula {
+                get {
+                    return ((string)(this[this.tableMaestroEventoVW.MatriculaColumn]));
+                }
+                set {
+                    this[this.tableMaestroEventoVW.MatriculaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Nombre {
+                get {
+                    return ((string)(this[this.tableMaestroEventoVW.NombreColumn]));
+                }
+                set {
+                    this[this.tableMaestroEventoVW.NombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ApPaterno {
+                get {
+                    return ((string)(this[this.tableMaestroEventoVW.ApPaternoColumn]));
+                }
+                set {
+                    this[this.tableMaestroEventoVW.ApPaternoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ApMaterno {
+                get {
+                    try {
+                        return ((string)(this[this.tableMaestroEventoVW.ApMaternoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ApMaterno\' in table \'MaestroEventoVW\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMaestroEventoVW.ApMaternoColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int DepartamentoID {
                 get {
-                    return ((int)(this[this.tableDepartamento.DepartamentoIDColumn]));
+                    return ((int)(this[this.tableMaestroEventoVW.DepartamentoIDColumn]));
                 }
                 set {
-                    this[this.tableDepartamento.DepartamentoIDColumn] = value;
+                    this[this.tableMaestroEventoVW.DepartamentoIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Descripcion {
+            public string DepartamentoDescripcion {
                 get {
-                    return ((string)(this[this.tableDepartamento.DescripcionColumn]));
+                    return ((string)(this[this.tableMaestroEventoVW.DepartamentoDescripcionColumn]));
                 }
                 set {
-                    this[this.tableDepartamento.DescripcionColumn] = value;
+                    this[this.tableMaestroEventoVW.DepartamentoDescripcionColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.Guid EventoID {
+                get {
+                    return ((global::System.Guid)(this[this.tableMaestroEventoVW.EventoIDColumn]));
+                }
+                set {
+                    this[this.tableMaestroEventoVW.EventoIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string EventoDescripcion {
+                get {
+                    return ((string)(this[this.tableMaestroEventoVW.EventoDescripcionColumn]));
+                }
+                set {
+                    this[this.tableMaestroEventoVW.EventoDescripcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Hora {
+                get {
+                    try {
+                        return ((string)(this[this.tableMaestroEventoVW.HoraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Hora\' in table \'MaestroEventoVW\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMaestroEventoVW.HoraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Fecha {
+                get {
+                    try {
+                        return ((string)(this[this.tableMaestroEventoVW.FechaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Fecha\' in table \'MaestroEventoVW\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMaestroEventoVW.FechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.Guid UsuarioID {
+                get {
+                    return ((global::System.Guid)(this[this.tableMaestroEventoVW.UsuarioIDColumn]));
+                }
+                set {
+                    this[this.tableMaestroEventoVW.UsuarioIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.Guid TipoEventoID {
+                get {
+                    return ((global::System.Guid)(this[this.tableMaestroEventoVW.TipoEventoIDColumn]));
+                }
+                set {
+                    this[this.tableMaestroEventoVW.TipoEventoIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TipoEventoDescripcion {
+                get {
+                    try {
+                        return ((string)(this[this.tableMaestroEventoVW.TipoEventoDescripcionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TipoEventoDescripcion\' in table \'MaestroEventoVW\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableMaestroEventoVW.TipoEventoDescripcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.Guid LugarID {
+                get {
+                    return ((global::System.Guid)(this[this.tableMaestroEventoVW.LugarIDColumn]));
+                }
+                set {
+                    this[this.tableMaestroEventoVW.LugarIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string LugarDescripcion {
+                get {
+                    return ((string)(this[this.tableMaestroEventoVW.LugarDescripcionColumn]));
+                }
+                set {
+                    this[this.tableMaestroEventoVW.LugarDescripcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsApMaternoNull() {
+                return this.IsNull(this.tableMaestroEventoVW.ApMaternoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetApMaternoNull() {
+                this[this.tableMaestroEventoVW.ApMaternoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsHoraNull() {
+                return this.IsNull(this.tableMaestroEventoVW.HoraColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetHoraNull() {
+                this[this.tableMaestroEventoVW.HoraColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFechaNull() {
+                return this.IsNull(this.tableMaestroEventoVW.FechaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFechaNull() {
+                this[this.tableMaestroEventoVW.FechaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTipoEventoDescripcionNull() {
+                return this.IsNull(this.tableMaestroEventoVW.TipoEventoDescripcionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTipoEventoDescripcionNull() {
+                this[this.tableMaestroEventoVW.TipoEventoDescripcionColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -589,22 +991,22 @@ namespace Data.Maestro {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class DepartamentoRowChangeEvent : global::System.EventArgs {
+        public class MaestroEventoVWRowChangeEvent : global::System.EventArgs {
             
-            private DepartamentoRow eventRow;
+            private MaestroEventoVWRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DepartamentoRowChangeEvent(DepartamentoRow row, global::System.Data.DataRowAction action) {
+            public MaestroEventoVWRowChangeEvent(MaestroEventoVWRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DepartamentoRow Row {
+            public MaestroEventoVWRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -620,7 +1022,7 @@ namespace Data.Maestro {
         }
     }
 }
-namespace Data.Maestro.DepartamentoTableAdapters {
+namespace Data.MaestroEvento.MaestroEventoVWTableAdapters {
     
     
     /// <summary>
@@ -632,7 +1034,7 @@ namespace Data.Maestro.DepartamentoTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DepartamentoTableAdapter : global::System.ComponentModel.Component {
+    public partial class MaestroEventoVWTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -646,7 +1048,7 @@ namespace Data.Maestro.DepartamentoTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DepartamentoTableAdapter() {
+        public MaestroEventoVWTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -743,34 +1145,23 @@ namespace Data.Maestro.DepartamentoTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Departamento";
+            tableMapping.DataSetTable = "MaestroEventoVW";
+            tableMapping.ColumnMappings.Add("Matricula", "Matricula");
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
+            tableMapping.ColumnMappings.Add("ApPaterno", "ApPaterno");
+            tableMapping.ColumnMappings.Add("ApMaterno", "ApMaterno");
             tableMapping.ColumnMappings.Add("DepartamentoID", "DepartamentoID");
-            tableMapping.ColumnMappings.Add("Descripcion", "Descripcion");
+            tableMapping.ColumnMappings.Add("DepartamentoDescripcion", "DepartamentoDescripcion");
+            tableMapping.ColumnMappings.Add("EventoID", "EventoID");
+            tableMapping.ColumnMappings.Add("EventoDescripcion", "EventoDescripcion");
+            tableMapping.ColumnMappings.Add("Hora", "Hora");
+            tableMapping.ColumnMappings.Add("Fecha", "Fecha");
+            tableMapping.ColumnMappings.Add("UsuarioID", "UsuarioID");
+            tableMapping.ColumnMappings.Add("TipoEventoID", "TipoEventoID");
+            tableMapping.ColumnMappings.Add("TipoEventoDescripcion", "TipoEventoDescripcion");
+            tableMapping.ColumnMappings.Add("LugarID", "LugarID");
+            tableMapping.ColumnMappings.Add("LugarDescripcion", "LugarDescripcion");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Departamento] WHERE (([DepartamentoID] = @Original_DepartamentoID) A" +
-                "ND ([Descripcion] = @Original_Descripcion))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepartamentoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartamentoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Departamento] ([DepartamentoID], [Descripcion]) VALUES (@Departament" +
-                "oID, @Descripcion);\r\nSELECT DepartamentoID, Descripcion FROM Departamento WHERE " +
-                "(DepartamentoID = @DepartamentoID)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartamentoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartamentoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Departamento] SET [DepartamentoID] = @DepartamentoID, [Descripcion] = @Descripcion WHERE (([DepartamentoID] = @Original_DepartamentoID) AND ([Descripcion] = @Original_Descripcion));
-SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @DepartamentoID)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartamentoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartamentoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepartamentoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartamentoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -783,32 +1174,37 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        DepartamentoID, Descripcion\r\nFROM            Departamento";
+            this._commandCollection[0].CommandText = @"SELECT        Matricula, Nombre, ApPaterno, ApMaterno, DepartamentoID, DepartamentoDescripcion, EventoID, EventoDescripcion, Hora, Fecha, UsuarioID, TipoEventoID, TipoEventoDescripcion, LugarID, 
+                         LugarDescripcion
+FROM            MaestroEventoVW
+WHERE        (Matricula = @Matricula)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Matricula", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Matricula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "UPDATE [Departamento] SET [Descripcion] = @Descripcion WHERE ([DepartamentoID] = " +
-                "@DepartamentoID);\r\nSELECT DepartamentoID, Descripcion FROM Departamento WHERE (D" +
-                "epartamentoID = @DepartamentoID)";
+            this._commandCollection[1].CommandText = @"SELECT        Matricula, Nombre, ApPaterno, ApMaterno, DepartamentoID, DepartamentoDescripcion, EventoID, EventoDescripcion, Hora, Fecha, UsuarioID, TipoEventoID, TipoEventoDescripcion, LugarID, 
+                         LugarDescripcion
+FROM            MaestroEventoVW
+WHERE        (EventoID = @EventoID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartamentoID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DepartamentoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "DELETE FROM [Departamento] WHERE ([DepartamentoID] = @DepartamentoID)";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartamentoID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DepartamentoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EventoID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, "EventoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Departamento.DepartamentoDataTable dataTable) {
+        public virtual int FillByMatricula(MaestroEventoVW.MaestroEventoVWDataTable dataTable, string Matricula) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Matricula == null)) {
+                throw new global::System.ArgumentNullException("Matricula");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Matricula));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -820,9 +1216,15 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Departamento.DepartamentoDataTable GetData() {
+        public virtual MaestroEventoVW.MaestroEventoVWDataTable GetDataByMatricula(string Matricula) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Departamento.DepartamentoDataTable dataTable = new Departamento.DepartamentoDataTable();
+            if ((Matricula == null)) {
+                throw new global::System.ArgumentNullException("Matricula");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Matricula));
+            }
+            MaestroEventoVW.MaestroEventoVWDataTable dataTable = new MaestroEventoVW.MaestroEventoVWDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -830,183 +1232,27 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Departamento.DepartamentoDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Departamento dataSet) {
-            return this.Adapter.Update(dataSet, "Departamento");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_DepartamentoID, string Original_Descripcion) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_DepartamentoID));
-            if ((Original_Descripcion == null)) {
-                throw new global::System.ArgumentNullException("Original_Descripcion");
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByEventoID(MaestroEventoVW.MaestroEventoVWDataTable dataTable, System.Guid EventoID) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(EventoID));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Descripcion));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int DepartamentoID, string Descripcion) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(DepartamentoID));
-            if ((Descripcion == null)) {
-                throw new global::System.ArgumentNullException("Descripcion");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Descripcion));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int DepartamentoID, string Descripcion, int Original_DepartamentoID, string Original_Descripcion) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(DepartamentoID));
-            if ((Descripcion == null)) {
-                throw new global::System.ArgumentNullException("Descripcion");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Descripcion));
-            }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_DepartamentoID));
-            if ((Original_Descripcion == null)) {
-                throw new global::System.ArgumentNullException("Original_Descripcion");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Descripcion));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Descripcion, int Original_DepartamentoID, string Original_Descripcion) {
-            return this.Update(Original_DepartamentoID, Descripcion, Original_DepartamentoID, Original_Descripcion);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int Actualizar(string Descripcion, int DepartamentoID) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            if ((Descripcion == null)) {
-                throw new global::System.ArgumentNullException("Descripcion");
-            }
-            else {
-                command.Parameters[0].Value = ((string)(Descripcion));
-            }
-            command.Parameters[1].Value = ((int)(DepartamentoID));
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
+            int returnValue = this.Adapter.Fill(dataTable);
             return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
-        public virtual int Delete1(int DepartamentoID) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
-            command.Parameters[0].Value = ((int)(DepartamentoID));
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual MaestroEventoVW.MaestroEventoVWDataTable GetDataByEventoID(System.Guid EventoID) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(EventoID));
+            MaestroEventoVW.MaestroEventoVWDataTable dataTable = new MaestroEventoVW.MaestroEventoVWDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     
@@ -1022,8 +1268,6 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
         
         private UpdateOrderOption _updateOrder;
         
-        private DepartamentoTableAdapter _departamentoTableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -1036,20 +1280,6 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public DepartamentoTableAdapter DepartamentoTableAdapter {
-            get {
-                return this._departamentoTableAdapter;
-            }
-            set {
-                this._departamentoTableAdapter = value;
             }
         }
         
@@ -1072,10 +1302,6 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._departamentoTableAdapter != null) 
-                            && (this._departamentoTableAdapter.Connection != null))) {
-                    return this._departamentoTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -1089,9 +1315,6 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._departamentoTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -1101,17 +1324,8 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(Departamento dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(MaestroEventoVW dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._departamentoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet._Departamento.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._departamentoTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -1120,16 +1334,8 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(Departamento dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(MaestroEventoVW dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._departamentoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet._Departamento.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._departamentoTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -1138,16 +1344,8 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(Departamento dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(MaestroEventoVW dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._departamentoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet._Departamento.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._departamentoTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             return result;
         }
         
@@ -1180,17 +1378,12 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(Departamento dataSet) {
+        public virtual int UpdateAll(MaestroEventoVW dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
-            }
-            if (((this._departamentoTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._departamentoTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
@@ -1224,15 +1417,6 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._departamentoTableAdapter != null)) {
-                    revertConnections.Add(this._departamentoTableAdapter, this._departamentoTableAdapter.Connection);
-                    this._departamentoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._departamentoTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._departamentoTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._departamentoTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._departamentoTableAdapter.Adapter);
-                    }
-                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1290,10 +1474,6 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._departamentoTableAdapter != null)) {
-                    this._departamentoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._departamentoTableAdapter]));
-                    this._departamentoTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

@@ -419,7 +419,7 @@ namespace Data.Evento {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EventoRow AddEventoRow(System.Guid EventoID, string Descripcion, System.TimeSpan Hora, System.DateTime Fecha, System.Guid UsuarioID, System.Guid TipoEventoID, System.Guid LugarID) {
+            public EventoRow AddEventoRow(System.Guid EventoID, string Descripcion, string Hora, string Fecha, System.Guid UsuarioID, System.Guid TipoEventoID, System.Guid LugarID) {
                 EventoRow rowEventoRow = ((EventoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EventoID,
@@ -474,9 +474,9 @@ namespace Data.Evento {
                 base.Columns.Add(this.columnEventoID);
                 this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescripcion);
-                this.columnHora = new global::System.Data.DataColumn("Hora", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
+                this.columnHora = new global::System.Data.DataColumn("Hora", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHora);
-                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFecha);
                 this.columnUsuarioID = new global::System.Data.DataColumn("UsuarioID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUsuarioID);
@@ -490,6 +490,8 @@ namespace Data.Evento {
                 this.columnEventoID.Unique = true;
                 this.columnDescripcion.AllowDBNull = false;
                 this.columnDescripcion.MaxLength = 50;
+                this.columnHora.MaxLength = 50;
+                this.columnFecha.MaxLength = 50;
                 this.columnUsuarioID.AllowDBNull = false;
                 this.columnTipoEventoID.AllowDBNull = false;
                 this.columnLugarID.AllowDBNull = false;
@@ -659,10 +661,10 @@ namespace Data.Evento {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.TimeSpan Hora {
+            public string Hora {
                 get {
                     try {
-                        return ((global::System.TimeSpan)(this[this.tableEvento.HoraColumn]));
+                        return ((string)(this[this.tableEvento.HoraColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Hora\' in table \'Evento\' is DBNull.", e);
@@ -675,10 +677,10 @@ namespace Data.Evento {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime Fecha {
+            public string Fecha {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableEvento.FechaColumn]));
+                        return ((string)(this[this.tableEvento.FechaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Fecha\' in table \'Evento\' is DBNull.", e);
@@ -921,9 +923,9 @@ namespace Data.Evento.EventoTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EventoID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EventoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Hora", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Hora", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Hora", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fecha", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UsuarioID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UsuarioID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TipoEventoID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEventoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LugarID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LugarID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -934,8 +936,8 @@ SELECT EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarID FROM
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EventoID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EventoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hora", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hora", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UsuarioID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UsuarioID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TipoEventoID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEventoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LugarID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LugarID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -946,17 +948,17 @@ SELECT EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarID FROM
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EventoID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EventoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hora", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hora", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UsuarioID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UsuarioID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TipoEventoID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEventoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LugarID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LugarID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EventoID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EventoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Hora", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Hora", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Hora", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fecha", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UsuarioID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UsuarioID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TipoEventoID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEventoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LugarID", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LugarID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -972,7 +974,7 @@ SELECT EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarID FROM
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarI" +
@@ -980,21 +982,27 @@ SELECT EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarID FROM
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"UPDATE [Evento] SET  [Descripcion] = @Descripcion, [Hora] = @Hora, [Fecha] = @Fecha, [UsuarioID] = @UsuarioID, [TipoEventoID] = @TipoEventoID, [LugarID] = @LugarID WHERE ([EventoID] = @EventoID);
+            this._commandCollection[1].CommandText = @"UPDATE [Evento] SET  [Descripcion] = @Descripcion, [Hora] = @Hora, [Fecha] = @Fecha, [UsuarioID] = @UsuarioID, [TipoEventoID] = @TipoEventoID, [LugarID] = @LugarID WHERE (EventoID = @EventoID);
 SELECT EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarID FROM Evento WHERE (EventoID = @EventoID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hora", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hora", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UsuarioID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, "UsuarioID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TipoEventoID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEventoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LugarID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, "LugarID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EventoID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, "EventoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "DELETE FROM [Evento] WHERE ([EventoID] = @EventoID)";
+            this._commandCollection[2].CommandText = "DELETE FROM [Evento] WHERE ([EventoID] = @Original_EventoID)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EventoID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, "EventoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EventoID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, "EventoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT        EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarI" +
+                "D\r\nFROM            Evento\r\nWhere  EventoID=@EventoID";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EventoID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, "EventoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1016,6 +1024,32 @@ SELECT EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarID FROM
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual Evento.EventoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            Evento.EventoDataTable dataTable = new Evento.EventoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByEventoID(Evento.EventoDataTable dataTable, System.Guid EventoID) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(EventoID));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Evento.EventoDataTable GetDataByEventoID(System.Guid EventoID) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.Guid)(EventoID));
             Evento.EventoDataTable dataTable = new Evento.EventoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -1054,7 +1088,7 @@ SELECT EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarID FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(System.Guid Original_EventoID, string Original_Descripcion, global::System.Nullable<global::System.TimeSpan> Original_Hora, global::System.Nullable<global::System.DateTime> Original_Fecha, System.Guid Original_UsuarioID, System.Guid Original_TipoEventoID, System.Guid Original_LugarID) {
+        public virtual int Delete(System.Guid Original_EventoID, string Original_Descripcion, string Original_Hora, string Original_Fecha, System.Guid Original_UsuarioID, System.Guid Original_TipoEventoID, System.Guid Original_LugarID) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((System.Guid)(Original_EventoID));
             if ((Original_Descripcion == null)) {
                 throw new global::System.ArgumentNullException("Original_Descripcion");
@@ -1062,21 +1096,21 @@ SELECT EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarID FROM
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Descripcion));
             }
-            if ((Original_Hora.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((System.TimeSpan)(Original_Hora.Value));
-            }
-            else {
+            if ((Original_Hora == null)) {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Original_Fecha.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_Fecha.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Hora));
+            }
+            if ((Original_Fecha == null)) {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Fecha));
             }
             this.Adapter.DeleteCommand.Parameters[6].Value = ((System.Guid)(Original_UsuarioID));
             this.Adapter.DeleteCommand.Parameters[7].Value = ((System.Guid)(Original_TipoEventoID));
@@ -1101,7 +1135,7 @@ SELECT EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarID FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.Guid EventoID, string Descripcion, global::System.Nullable<global::System.TimeSpan> Hora, global::System.Nullable<global::System.DateTime> Fecha, System.Guid UsuarioID, System.Guid TipoEventoID, System.Guid LugarID) {
+        public virtual int Insert(System.Guid EventoID, string Descripcion, string Hora, string Fecha, System.Guid UsuarioID, System.Guid TipoEventoID, System.Guid LugarID) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((System.Guid)(EventoID));
             if ((Descripcion == null)) {
                 throw new global::System.ArgumentNullException("Descripcion");
@@ -1109,17 +1143,17 @@ SELECT EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarID FROM
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Descripcion));
             }
-            if ((Hora.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.TimeSpan)(Hora.Value));
-            }
-            else {
+            if ((Hora == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Fecha.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(Fecha.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Hora));
+            }
+            if ((Fecha == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Fecha));
             }
             this.Adapter.InsertCommand.Parameters[4].Value = ((System.Guid)(UsuarioID));
             this.Adapter.InsertCommand.Parameters[5].Value = ((System.Guid)(TipoEventoID));
@@ -1144,7 +1178,7 @@ SELECT EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarID FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.Guid EventoID, string Descripcion, global::System.Nullable<global::System.TimeSpan> Hora, global::System.Nullable<global::System.DateTime> Fecha, System.Guid UsuarioID, System.Guid TipoEventoID, System.Guid LugarID, System.Guid Original_EventoID, string Original_Descripcion, global::System.Nullable<global::System.TimeSpan> Original_Hora, global::System.Nullable<global::System.DateTime> Original_Fecha, System.Guid Original_UsuarioID, System.Guid Original_TipoEventoID, System.Guid Original_LugarID) {
+        public virtual int Update(System.Guid EventoID, string Descripcion, string Hora, string Fecha, System.Guid UsuarioID, System.Guid TipoEventoID, System.Guid LugarID, System.Guid Original_EventoID, string Original_Descripcion, string Original_Hora, string Original_Fecha, System.Guid Original_UsuarioID, System.Guid Original_TipoEventoID, System.Guid Original_LugarID) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((System.Guid)(EventoID));
             if ((Descripcion == null)) {
                 throw new global::System.ArgumentNullException("Descripcion");
@@ -1152,17 +1186,17 @@ SELECT EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarID FROM
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Descripcion));
             }
-            if ((Hora.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.TimeSpan)(Hora.Value));
-            }
-            else {
+            if ((Hora == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Fecha.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Fecha.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Hora));
+            }
+            if ((Fecha == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Fecha));
             }
             this.Adapter.UpdateCommand.Parameters[4].Value = ((System.Guid)(UsuarioID));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((System.Guid)(TipoEventoID));
@@ -1174,21 +1208,21 @@ SELECT EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarID FROM
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Descripcion));
             }
-            if ((Original_Hora.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.TimeSpan)(Original_Hora.Value));
-            }
-            else {
+            if ((Original_Hora == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_Fecha.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_Fecha.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Hora));
+            }
+            if ((Original_Fecha == null)) {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Fecha));
             }
             this.Adapter.UpdateCommand.Parameters[13].Value = ((System.Guid)(Original_UsuarioID));
             this.Adapter.UpdateCommand.Parameters[14].Value = ((System.Guid)(Original_TipoEventoID));
@@ -1213,7 +1247,7 @@ SELECT EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarID FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Descripcion, global::System.Nullable<global::System.TimeSpan> Hora, global::System.Nullable<global::System.DateTime> Fecha, System.Guid UsuarioID, System.Guid TipoEventoID, System.Guid LugarID, System.Guid Original_EventoID, string Original_Descripcion, global::System.Nullable<global::System.TimeSpan> Original_Hora, global::System.Nullable<global::System.DateTime> Original_Fecha, System.Guid Original_UsuarioID, System.Guid Original_TipoEventoID, System.Guid Original_LugarID) {
+        public virtual int Update(string Descripcion, string Hora, string Fecha, System.Guid UsuarioID, System.Guid TipoEventoID, System.Guid LugarID, System.Guid Original_EventoID, string Original_Descripcion, string Original_Hora, string Original_Fecha, System.Guid Original_UsuarioID, System.Guid Original_TipoEventoID, System.Guid Original_LugarID) {
             return this.Update(Original_EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarID, Original_EventoID, Original_Descripcion, Original_Hora, Original_Fecha, Original_UsuarioID, Original_TipoEventoID, Original_LugarID);
         }
         
@@ -1266,9 +1300,9 @@ SELECT EventoID, Descripcion, Hora, Fecha, UsuarioID, TipoEventoID, LugarID FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
-        public virtual int Eliminar(System.Guid EventoID) {
+        public virtual int Eliminar(System.Guid Original_EventoID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
-            command.Parameters[0].Value = ((System.Guid)(EventoID));
+            command.Parameters[0].Value = ((System.Guid)(Original_EventoID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

@@ -39,9 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DisponibilidadMaestroBL.cs" />
+    <Compile Include="DepartamentoBL.cs" />
+    <Compile Include="EventoBL.cs" />
+    <Compile Include="LugarBL.cs" />
+    <Compile Include="MaestroBL.cs" />
+    <Compile Include="MaestroEventoBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoEventoBL.cs" />
+    <Compile Include="UsuarioBL.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Data\Proyecto.Data.csproj">
       <Project>{3603539a-2b09-476e-8c22-07cf70b5069b}</Project>

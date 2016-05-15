@@ -895,7 +895,7 @@ SELECT Matricula, Nombre, ApPaterno, ApMaterno, DepartamentoID FROM Maestro WHER
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Matricula, Nombre, ApPaterno, ApMaterno, DepartamentoID\r\nFROM      " +
@@ -916,6 +916,12 @@ SELECT Matricula, Nombre, ApPaterno, ApMaterno, DepartamentoID FROM Maestro WHER
             this._commandCollection[2].CommandText = "DELETE FROM [Maestro] WHERE ([Matricula] = @Matricula)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Matricula", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Matricula", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT        Matricula, Nombre, ApPaterno, ApMaterno, DepartamentoID\r\nFROM      " +
+                "      Maestro\r\nWHERE        (Matricula = @Matricula)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Matricula", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Matricula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -937,6 +943,42 @@ SELECT Matricula, Nombre, ApPaterno, ApMaterno, DepartamentoID FROM Maestro WHER
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual Maestro.MaestroDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            Maestro.MaestroDataTable dataTable = new Maestro.MaestroDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByMatricula(Maestro.MaestroDataTable dataTable, string Matricula) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((Matricula == null)) {
+                throw new global::System.ArgumentNullException("Matricula");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Matricula));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Maestro.MaestroDataTable GetDataByMatricula(string Matricula) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((Matricula == null)) {
+                throw new global::System.ArgumentNullException("Matricula");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Matricula));
+            }
             Maestro.MaestroDataTable dataTable = new Maestro.MaestroDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
