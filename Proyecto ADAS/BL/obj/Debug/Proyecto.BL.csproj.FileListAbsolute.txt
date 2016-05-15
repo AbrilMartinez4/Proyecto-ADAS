@@ -5,3 +5,10 @@ C:\Users\UsuarioLocal\Desktop\Proyecto-ADAS\Proyecto ADAS\BL\bin\Debug\Data.pdb
 C:\Users\UsuarioLocal\Desktop\Proyecto-ADAS\Proyecto ADAS\BL\obj\Debug\Proyecto.BL.csprojResolveAssemblyReference.cache
 C:\Users\UsuarioLocal\Desktop\Proyecto-ADAS\Proyecto ADAS\BL\obj\Debug\BL.dll
 C:\Users\UsuarioLocal\Desktop\Proyecto-ADAS\Proyecto ADAS\BL\obj\Debug\BL.pdb
+C:\Users\UsuarioLocal\Desktop\Adas\Proyecto-ADAS\Proyecto ADAS\BL\obj\Debug\Proyecto.BL.csprojResolveAssemblyReference.cache
+C:\Users\UsuarioLocal\Desktop\Adas\Proyecto-ADAS\Proyecto ADAS\BL\bin\Debug\Proyecto.BL.dll
+C:\Users\UsuarioLocal\Desktop\Adas\Proyecto-ADAS\Proyecto ADAS\BL\bin\Debug\Proyecto.BL.pdb
+C:\Users\UsuarioLocal\Desktop\Adas\Proyecto-ADAS\Proyecto ADAS\BL\bin\Debug\Proyecto.Data.dll
+C:\Users\UsuarioLocal\Desktop\Adas\Proyecto-ADAS\Proyecto ADAS\BL\bin\Debug\Proyecto.Data.pdb
+C:\Users\UsuarioLocal\Desktop\Adas\Proyecto-ADAS\Proyecto ADAS\BL\obj\Debug\Proyecto.BL.dll
+C:\Users\UsuarioLocal\Desktop\Adas\Proyecto-ADAS\Proyecto ADAS\BL\obj\Debug\Proyecto.BL.pdb

@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Data.MaestroEvento {
+namespace Proyecto.Data.MaestroEvento {
     
     
     /// <summary>
@@ -608,7 +608,7 @@ namespace Data.MaestroEvento {
         }
     }
 }
-namespace Data.MaestroEvento.DSMaestroEventoTableAdapters {
+namespace Proyecto.Data.MaestroEvento.DSMaestroEventoTableAdapters {
     
     
     /// <summary>
@@ -748,7 +748,7 @@ namespace Data.MaestroEvento.DSMaestroEventoTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Data.Properties.Settings.Default.TitulacionConnectionString;
+            this._connection.ConnectionString = global::Proyecto.Data.Properties.Settings.Default.TitulacionConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

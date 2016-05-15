@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Data.Evento;
-using Data.Evento.LugarTableAdapters;
+using Proyecto.Data.Evento;
+using Proyecto.Data.Evento.LugarTableAdapters;
 
-namespace BL
+namespace Proyecto.BL
 {
-    class LugarBL
+    public class LugarBL
     {
         LugarTableAdapter TA = new LugarTableAdapter();
 

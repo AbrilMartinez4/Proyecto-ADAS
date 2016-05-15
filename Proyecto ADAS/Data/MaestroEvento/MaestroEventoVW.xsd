@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TitulacionConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TitulacionConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Data.Properties.Settings.GlobalReference.Default.TitulacionConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TitulacionConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="TitulacionConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Proyecto.Data.Properties.Settings.GlobalReference.Default.TitulacionConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MaestroEventoVWTableAdapter" GeneratorDataComponentClassName="MaestroEventoVWTableAdapter" Name="MaestroEventoVW" UserDataComponentName="MaestroEventoVWTableAdapter">
@@ -64,7 +64,7 @@ WHERE        (EventoID = @EventoID)</CommandText>
   <xs:element name="MaestroEventoVW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MaestroEventoVW" msprop:Generator_UserDSName="MaestroEventoVW">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="MaestroEventoVW" msprop:Generator_TableClassName="MaestroEventoVWDataTable" msprop:Generator_TableVarName="tableMaestroEventoVW" msprop:Generator_TablePropName="_MaestroEventoVW" msprop:Generator_RowDeletingName="MaestroEventoVWRowDeleting" msprop:Generator_RowChangingName="MaestroEventoVWRowChanging" msprop:Generator_RowEvHandlerName="MaestroEventoVWRowChangeEventHandler" msprop:Generator_RowDeletedName="MaestroEventoVWRowDeleted" msprop:Generator_UserTableName="MaestroEventoVW" msprop:Generator_RowChangedName="MaestroEventoVWRowChanged" msprop:Generator_RowEvArgName="MaestroEventoVWRowChangeEvent" msprop:Generator_RowClassName="MaestroEventoVWRow">
+        <xs:element name="MaestroEventoVW" msprop:Generator_TableClassName="MaestroEventoVWDataTable" msprop:Generator_TableVarName="tableMaestroEventoVW" msprop:Generator_RowChangedName="MaestroEventoVWRowChanged" msprop:Generator_TablePropName="_MaestroEventoVW" msprop:Generator_RowDeletingName="MaestroEventoVWRowDeleting" msprop:Generator_RowChangingName="MaestroEventoVWRowChanging" msprop:Generator_RowEvHandlerName="MaestroEventoVWRowChangeEventHandler" msprop:Generator_RowDeletedName="MaestroEventoVWRowDeleted" msprop:Generator_RowClassName="MaestroEventoVWRow" msprop:Generator_UserTableName="MaestroEventoVW" msprop:Generator_RowEvArgName="MaestroEventoVWRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Matricula" msprop:Generator_ColumnVarNameInTable="columnMatricula" msprop:Generator_ColumnPropNameInRow="Matricula" msprop:Generator_ColumnPropNameInTable="MatriculaColumn" msprop:Generator_UserColumnName="Matricula">

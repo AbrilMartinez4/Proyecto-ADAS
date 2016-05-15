@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TitulacionConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TitulacionConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Data.Properties.Settings.GlobalReference.Default.TitulacionConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TitulacionConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="TitulacionConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Proyecto.Data.Properties.Settings.GlobalReference.Default.TitulacionConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TipoEventoTableAdapter" GeneratorDataComponentClassName="TipoEventoTableAdapter" Name="TipoEvento" UserDataComponentName="TipoEventoTableAdapter">
@@ -88,7 +88,7 @@ SELECT TipoEventoID, Descripcion FROM TipoEvento WHERE (TipoEventoID = @TipoEven
   <xs:element name="TipoEvento" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TipoEvento" msprop:Generator_UserDSName="TipoEvento">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="TipoEvento" msprop:Generator_TableClassName="TipoEventoDataTable" msprop:Generator_TableVarName="tableTipoEvento" msprop:Generator_RowChangedName="TipoEventoRowChanged" msprop:Generator_TablePropName="_TipoEvento" msprop:Generator_RowDeletingName="TipoEventoRowDeleting" msprop:Generator_RowChangingName="TipoEventoRowChanging" msprop:Generator_RowEvHandlerName="TipoEventoRowChangeEventHandler" msprop:Generator_RowDeletedName="TipoEventoRowDeleted" msprop:Generator_RowClassName="TipoEventoRow" msprop:Generator_UserTableName="TipoEvento" msprop:Generator_RowEvArgName="TipoEventoRowChangeEvent">
+        <xs:element name="TipoEvento" msprop:Generator_TableClassName="TipoEventoDataTable" msprop:Generator_TableVarName="tableTipoEvento" msprop:Generator_TablePropName="_TipoEvento" msprop:Generator_RowDeletingName="TipoEventoRowDeleting" msprop:Generator_RowChangingName="TipoEventoRowChanging" msprop:Generator_RowEvHandlerName="TipoEventoRowChangeEventHandler" msprop:Generator_RowDeletedName="TipoEventoRowDeleted" msprop:Generator_UserTableName="TipoEvento" msprop:Generator_RowChangedName="TipoEventoRowChanged" msprop:Generator_RowEvArgName="TipoEventoRowChangeEvent" msprop:Generator_RowClassName="TipoEventoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TipoEventoID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnTipoEventoID" msprop:Generator_ColumnPropNameInRow="TipoEventoID" msprop:Generator_ColumnPropNameInTable="TipoEventoIDColumn" msprop:Generator_UserColumnName="TipoEventoID" type="xs:string" />

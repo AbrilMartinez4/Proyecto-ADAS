@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Data.MaestroEvento;
-using Data.MaestroEvento.DSMaestroEventoTableAdapters;
-using Data.MaestroEvento.MaestroEventoVWTableAdapters;
+using Proyecto.Data.MaestroEvento;
+using Proyecto.Data.MaestroEvento.DSMaestroEventoTableAdapters;
+using Proyecto.Data.MaestroEvento.MaestroEventoVWTableAdapters;
 
-namespace BL
+namespace Proyecto.BL
 {
-    class MaestroEventoBL
+    public class MaestroEventoBL
     {
         MaestroEventoTableAdapter TA = new MaestroEventoTableAdapter();
 

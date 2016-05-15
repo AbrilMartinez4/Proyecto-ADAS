@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Data.Maestro;
-using Data.Maestro.DepartamentoTableAdapters;
-namespace BL
+using Proyecto.Data.Maestro;
+using Proyecto.Data.Maestro.DSDepartamentoTableAdapters;
+namespace Proyecto.BL
 {
-    class DepartamentoBL
+    public class DepartamentoBL
     {
         DepartamentoTableAdapter TA = new DepartamentoTableAdapter();
 
@@ -18,7 +18,7 @@ namespace BL
 
         }
         #endregion
-
+       
         #region Actualizaciones
         public void Actualizar(DSDepartamento.DepartamentoDataTable dtb)
         {
@@ -59,10 +59,11 @@ namespace BL
         #endregion
 
         #region Eliminaciones
-        public void Eliminar(Guid DepartamentoID)
+        public void Eliminar(Int32 DepartamentoID)
         {
 
             TA.Eliminar(DepartamentoID);
+            
         }
         #endregion
     }

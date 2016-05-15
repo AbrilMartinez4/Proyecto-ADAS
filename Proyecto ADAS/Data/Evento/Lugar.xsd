@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TitulacionConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TitulacionConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Data.Properties.Settings.GlobalReference.Default.TitulacionConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TitulacionConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="TitulacionConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Proyecto.Data.Properties.Settings.GlobalReference.Default.TitulacionConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LugarTableAdapter" GeneratorDataComponentClassName="LugarTableAdapter" Name="Lugar" UserDataComponentName="LugarTableAdapter">
@@ -87,7 +87,7 @@ SELECT LugarID, Descripcion FROM Lugar WHERE (LugarID = @LugarID)</CommandText>
   <xs:element name="Lugar" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Lugar" msprop:Generator_UserDSName="Lugar">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Lugar" msprop:Generator_TableClassName="LugarDataTable" msprop:Generator_TableVarName="tableLugar" msprop:Generator_TablePropName="_Lugar" msprop:Generator_RowDeletingName="LugarRowDeleting" msprop:Generator_RowChangingName="LugarRowChanging" msprop:Generator_RowEvHandlerName="LugarRowChangeEventHandler" msprop:Generator_RowDeletedName="LugarRowDeleted" msprop:Generator_UserTableName="Lugar" msprop:Generator_RowChangedName="LugarRowChanged" msprop:Generator_RowEvArgName="LugarRowChangeEvent" msprop:Generator_RowClassName="LugarRow">
+        <xs:element name="Lugar" msprop:Generator_TableClassName="LugarDataTable" msprop:Generator_TableVarName="tableLugar" msprop:Generator_RowChangedName="LugarRowChanged" msprop:Generator_TablePropName="_Lugar" msprop:Generator_RowDeletingName="LugarRowDeleting" msprop:Generator_RowChangingName="LugarRowChanging" msprop:Generator_RowEvHandlerName="LugarRowChangeEventHandler" msprop:Generator_RowDeletedName="LugarRowDeleted" msprop:Generator_RowClassName="LugarRow" msprop:Generator_UserTableName="Lugar" msprop:Generator_RowEvArgName="LugarRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="LugarID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnLugarID" msprop:Generator_ColumnPropNameInRow="LugarID" msprop:Generator_ColumnPropNameInTable="LugarIDColumn" msprop:Generator_UserColumnName="LugarID" type="xs:string" />

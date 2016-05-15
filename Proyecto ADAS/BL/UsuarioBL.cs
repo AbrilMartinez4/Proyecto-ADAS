@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Data.Usuario;
-using Data.Usuario.DSUsuarioTableAdapters;
+using Proyecto.Data.Usuario;
+using Proyecto.Data.Usuario.DSUsuarioTableAdapters;
 
-namespace BL
+namespace Proyecto.BL
 {
-    class UsuarioBL
+    public class UsuarioBL
     {
         UsuarioTableAdapter TA = new UsuarioTableAdapter();
 
@@ -42,10 +42,10 @@ namespace BL
 
             return tabla;
         }
-        public DSUsuario.UsuarioDataTable Seleccionar(String Nombre)
+        public DSUsuario.UsuarioDataTable VerificarUsuario(String Nombre, String Contraseña)
         {
             DSUsuario.UsuarioDataTable tabla = new DSUsuario.UsuarioDataTable();
-            tabla = TA.GetDataByNombre(Nombre);
+            tabla = TA.GetDataByNombre(Nombre, Contraseña);
 
             return tabla;
         }

@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Data.Maestro {
+namespace Proyecto.Data.Maestro {
     
     
     /// <summary>
@@ -20,7 +20,7 @@ namespace Data.Maestro {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Departamento")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DSDepartamento")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DSDepartamento : global::System.Data.DataSet {
         
@@ -79,7 +79,7 @@ namespace Data.Maestro {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DepartamentoDataTable _Departamento {
+        public DepartamentoDataTable Departamento {
             get {
                 return this.tableDepartamento;
             }
@@ -199,9 +199,9 @@ namespace Data.Maestro {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "Departamento";
+            this.DataSetName = "DSDepartamento";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Departamento.xsd";
+            this.Namespace = "http://tempuri.org/DSDepartamento.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableDepartamento = new DepartamentoDataTable();
@@ -210,7 +210,7 @@ namespace Data.Maestro {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerialize_Departamento() {
+        private bool ShouldSerializeDepartamento() {
             return false;
         }
         
@@ -420,8 +420,6 @@ namespace Data.Maestro {
                 this.columnDepartamentoID.Unique = true;
                 this.columnDescripcion.AllowDBNull = false;
                 this.columnDescripcion.MaxLength = 50;
-                this.ExtendedProperties.Add("Generator_TablePropName", "_Departamento");
-                this.ExtendedProperties.Add("Generator_UserTableName", "Departamento");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -620,7 +618,7 @@ namespace Data.Maestro {
         }
     }
 }
-namespace Data.Maestro.DepartamentoTableAdapters {
+namespace Proyecto.Data.Maestro.DSDepartamentoTableAdapters {
     
     
     /// <summary>
@@ -777,7 +775,7 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Data.Properties.Settings.Default.TitulacionConnectionString;
+            this._connection.ConnectionString = global::Proyecto.Data.Properties.Settings.Default.TitulacionConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -790,15 +788,14 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "UPDATE [Departamento] SET [Descripcion] = @Descripcion WHERE ([DepartamentoID] = " +
-                "@DepartamentoID);\r\nSELECT DepartamentoID, Descripcion FROM Departamento WHERE (D" +
-                "epartamentoID = @DepartamentoID)";
+            this._commandCollection[1].CommandText = "UPDATE       Departamento\r\nSET                Descripcion = @Descripcion\r\nWHERE  " +
+                "      (DepartamentoID = @DepartamentoID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartamentoID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DepartamentoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "DELETE FROM [Departamento] WHERE ([DepartamentoID] = @DepartamentoID)";
+            this._commandCollection[2].CommandText = "DELETE FROM Departamento\r\nWHERE        (DepartamentoID = @DepartamentoID)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartamentoID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DepartamentoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
@@ -989,7 +986,7 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
-        public virtual int Delete1(int DepartamentoID) {
+        public virtual int Eliminar(int DepartamentoID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             command.Parameters[0].Value = ((int)(DepartamentoID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
@@ -1104,7 +1101,7 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
         private int UpdateUpdatedRows(DSDepartamento dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._departamentoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet._Departamento.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                global::System.Data.DataRow[] updatedRows = dataSet.Departamento.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
@@ -1123,7 +1120,7 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
         private int UpdateInsertedRows(DSDepartamento dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._departamentoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet._Departamento.Select(null, null, global::System.Data.DataViewRowState.Added);
+                global::System.Data.DataRow[] addedRows = dataSet.Departamento.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._departamentoTableAdapter.Update(addedRows));
@@ -1141,7 +1138,7 @@ SELECT DepartamentoID, Descripcion FROM Departamento WHERE (DepartamentoID = @De
         private int UpdateDeletedRows(DSDepartamento dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._departamentoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet._Departamento.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                global::System.Data.DataRow[] deletedRows = dataSet.Departamento.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._departamentoTableAdapter.Update(deletedRows));

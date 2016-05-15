@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Data.Evento;
-using Data.Evento.EventoTableAdapters;
+using Proyecto.Data.Evento;
+using Proyecto.Data.Evento.EventoTableAdapters;
 using System.Data.SqlClient;
 
-namespace BL
+namespace Proyecto.BL
 {
-    class EventoBL
+    public class EventoBL
     {
         EventoTableAdapter TA = new EventoTableAdapter();
 

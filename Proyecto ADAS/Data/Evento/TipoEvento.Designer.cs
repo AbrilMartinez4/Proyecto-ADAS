@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Data.Evento {
+namespace Proyecto.Data.Evento {
     
     
     /// <summary>
@@ -635,7 +635,7 @@ namespace Data.Evento {
         }
     }
 }
-namespace Data.Evento.TipoEventoTableAdapters {
+namespace Proyecto.Data.Evento.TipoEventoTableAdapters {
     
     
     /// <summary>
@@ -795,7 +795,7 @@ SELECT TipoEventoID, Descripcion FROM TipoEvento WHERE (TipoEventoID = @TipoEven
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Data.Properties.Settings.Default.TitulacionConnectionString;
+            this._connection.ConnectionString = global::Proyecto.Data.Properties.Settings.Default.TitulacionConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

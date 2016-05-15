@@ -7,8 +7,8 @@
     <ProjectGuid>{3603539A-2B09-476E-8C22-07CF70B5069B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Data</RootNamespace>
-    <AssemblyName>Data</AssemblyName>
+    <RootNamespace>Proyecto.Data</RootNamespace>
+    <AssemblyName>Proyecto.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

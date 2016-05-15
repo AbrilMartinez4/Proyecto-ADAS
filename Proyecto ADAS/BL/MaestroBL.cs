@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Data.Maestro;
-using Data.Maestro.MaestroTableAdapters;
+using Proyecto.Data.Maestro;
+using Proyecto.Data.Maestro.MaestroTableAdapters;
 
-namespace BL
+namespace Proyecto.BL
 {
-    class MaestroBL
+    public class MaestroBL
     {
         MaestroTableAdapter TA = new MaestroTableAdapter();
 

@@ -7,8 +7,8 @@
     <ProjectGuid>{64DCBDBB-7A8D-4A8D-BC88-3B32C21441FC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BL</RootNamespace>
-    <AssemblyName>BL</AssemblyName>
+    <RootNamespace>Proyecto.BL</RootNamespace>
+    <AssemblyName>Proyecto.BL</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

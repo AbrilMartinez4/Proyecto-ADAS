@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Data.Maestro {
+namespace Proyecto.Data.Maestro {
     
     
     /// <summary>
@@ -688,7 +688,7 @@ namespace Data.Maestro {
         }
     }
 }
-namespace Data.Maestro.DSDisponibilidadMaestroTableAdapters {
+namespace Proyecto.Data.Maestro.DSDisponibilidadMaestroTableAdapters {
     
     
     /// <summary>
@@ -857,7 +857,7 @@ SELECT DisponibilidadID, Matricula, Fecha, Hora FROM DisponibilidadMaestro WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Data.Properties.Settings.Default.TitulacionConnectionString;
+            this._connection.ConnectionString = global::Proyecto.Data.Properties.Settings.Default.TitulacionConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

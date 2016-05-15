@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TitulacionConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TitulacionConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Data.Properties.Settings.GlobalReference.Default.TitulacionConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TitulacionConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="TitulacionConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Proyecto.Data.Properties.Settings.GlobalReference.Default.TitulacionConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EventoTableAdapter" GeneratorDataComponentClassName="EventoTableAdapter" Name="Evento" UserDataComponentName="EventoTableAdapter">
@@ -133,7 +133,7 @@ Where  EventoID=@EventoID</CommandText>
   <xs:element name="Evento" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Evento" msprop:Generator_UserDSName="Evento">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Evento" msprop:Generator_TableClassName="EventoDataTable" msprop:Generator_TableVarName="tableEvento" msprop:Generator_TablePropName="_Evento" msprop:Generator_RowDeletingName="EventoRowDeleting" msprop:Generator_RowChangingName="EventoRowChanging" msprop:Generator_RowEvHandlerName="EventoRowChangeEventHandler" msprop:Generator_RowDeletedName="EventoRowDeleted" msprop:Generator_UserTableName="Evento" msprop:Generator_RowChangedName="EventoRowChanged" msprop:Generator_RowEvArgName="EventoRowChangeEvent" msprop:Generator_RowClassName="EventoRow">
+        <xs:element name="Evento" msprop:Generator_TableClassName="EventoDataTable" msprop:Generator_TableVarName="tableEvento" msprop:Generator_RowChangedName="EventoRowChanged" msprop:Generator_TablePropName="_Evento" msprop:Generator_RowDeletingName="EventoRowDeleting" msprop:Generator_RowChangingName="EventoRowChanging" msprop:Generator_RowEvHandlerName="EventoRowChangeEventHandler" msprop:Generator_RowDeletedName="EventoRowDeleted" msprop:Generator_RowClassName="EventoRow" msprop:Generator_UserTableName="Evento" msprop:Generator_RowEvArgName="EventoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="EventoID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnEventoID" msprop:Generator_ColumnPropNameInRow="EventoID" msprop:Generator_ColumnPropNameInTable="EventoIDColumn" msprop:Generator_UserColumnName="EventoID" type="xs:string" />

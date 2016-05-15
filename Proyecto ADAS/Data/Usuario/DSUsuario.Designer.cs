@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Data.Usuario {
+namespace Proyecto.Data.Usuario {
     
     
     /// <summary>
@@ -645,7 +645,7 @@ namespace Data.Usuario {
         }
     }
 }
-namespace Data.Usuario.DSUsuarioTableAdapters {
+namespace Proyecto.Data.Usuario.DSUsuarioTableAdapters {
     
     
     /// <summary>
@@ -807,7 +807,7 @@ SELECT UsuarioID, Nombre, Contraseña FROM Usuario WHERE (UsuarioID = @UsuarioID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Data.Properties.Settings.Default.TitulacionConnectionString;
+            this._connection.ConnectionString = global::Proyecto.Data.Properties.Settings.Default.TitulacionConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -820,24 +820,24 @@ SELECT UsuarioID, Nombre, Contraseña FROM Usuario WHERE (UsuarioID = @UsuarioID
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "UPDATE [Usuario] SET  [Nombre] = @Nombre, [Contraseña] = @Contraseña  WHERE (Usua" +
-                "rioID = @UsuarioID);\r\nSELECT UsuarioID, Nombre, Contraseña FROM Usuario WHERE (U" +
-                "suarioID = @UsuarioID)";
+            this._commandCollection[1].CommandText = "UPDATE       Usuario\r\nSET                Nombre = @Nombre, Contraseña = @Contrase" +
+                "ña\r\nWHERE        (UsuarioID = @UsuarioID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contraseña", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Contraseña", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UsuarioID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, "UsuarioID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "DELETE FROM [Usuario] WHERE (UsuarioID = @UsuarioID)";
+            this._commandCollection[2].CommandText = "DELETE FROM [Usuario] WHERE ([UsuarioID] = @UsuarioID)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UsuarioID", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, "UsuarioID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "SELECT        UsuarioID, Nombre, Contraseña\r\nFROM            Usuario\r\nWHERE      " +
-                "  (Nombre = @Nombre)";
+                "  (Nombre = @Nombre) AND (Contraseña = @Contraseña)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contraseña", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Contraseña", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -868,13 +868,19 @@ SELECT UsuarioID, Nombre, Contraseña FROM Usuario WHERE (UsuarioID = @UsuarioID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByNombre(DSUsuario.UsuarioDataTable dataTable, string Nombre) {
+        public virtual int FillByNombre(DSUsuario.UsuarioDataTable dataTable, string Nombre, string Contraseña) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((Nombre == null)) {
                 throw new global::System.ArgumentNullException("Nombre");
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Nombre));
+            }
+            if ((Contraseña == null)) {
+                throw new global::System.ArgumentNullException("Contraseña");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Contraseña));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -887,13 +893,19 @@ SELECT UsuarioID, Nombre, Contraseña FROM Usuario WHERE (UsuarioID = @UsuarioID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DSUsuario.UsuarioDataTable GetDataByNombre(string Nombre) {
+        public virtual DSUsuario.UsuarioDataTable GetDataByNombre(string Nombre, string Contraseña) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((Nombre == null)) {
                 throw new global::System.ArgumentNullException("Nombre");
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Nombre));
+            }
+            if ((Contraseña == null)) {
+                throw new global::System.ArgumentNullException("Contraseña");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Contraseña));
             }
             DSUsuario.UsuarioDataTable dataTable = new DSUsuario.UsuarioDataTable();
             this.Adapter.Fill(dataTable);

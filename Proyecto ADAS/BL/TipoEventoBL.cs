@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Data.Evento.TipoEventoTableAdapters;
-using Data.Evento;
+using Proyecto.Data.Evento.TipoEventoTableAdapters;
+using Proyecto.Data.Evento;
 
-namespace BL
+namespace Proyecto.BL
 {
-    class TipoEventoBL
+    public class TipoEventoBL
     {
         TipoEventoTableAdapter TA = new TipoEventoTableAdapter();
 

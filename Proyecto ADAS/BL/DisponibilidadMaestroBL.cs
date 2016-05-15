@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Data.Maestro.DSDisponibilidadMaestroTableAdapters;
-using Data.Maestro;
+using Proyecto.Data.Maestro.DSDisponibilidadMaestroTableAdapters;
+using Proyecto.Data.Maestro;
 
-namespace BL
+namespace Proyecto.BL
 {
     public class DisponibilidadMaestroBL
     {
