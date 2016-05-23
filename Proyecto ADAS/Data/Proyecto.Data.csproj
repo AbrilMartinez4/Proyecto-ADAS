@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3603539A-2B09-476E-8C22-07CF70B5069B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Proyecto.Data</RootNamespace>
+    <AssemblyName>Proyecto.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Evento\Evento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Evento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Evento\Lugar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lugar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Evento\TipoEvento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TipoEvento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MaestroEvento\MaestroEventoVW.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaestroEventoVW.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Maestro\DSDepartamento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSDepartamento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Maestro\DSDisponibilidadMaestro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSDisponibilidadMaestro.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Maestro\DSMaestro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSMaestro.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="MaestroEvento\DSMaestroEvento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSMaestroEvento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\DSUsuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSUsuario.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Evento\Evento.xsc">
+      <DependentUpon>Evento.xsd</DependentUpon>
+    </None>
+    <None Include="Evento\Evento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Evento.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Evento\Evento.xss">
+      <DependentUpon>Evento.xsd</DependentUpon>
+    </None>
+    <None Include="Evento\Lugar.xsc">
+      <DependentUpon>Lugar.xsd</DependentUpon>
+    </None>
+    <None Include="Evento\Lugar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lugar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Evento\Lugar.xss">
+      <DependentUpon>Lugar.xsd</DependentUpon>
+    </None>
+    <None Include="Evento\TipoEvento.xsc">
+      <DependentUpon>TipoEvento.xsd</DependentUpon>
+    </None>
+    <None Include="Evento\TipoEvento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TipoEvento.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Evento\TipoEvento.xss">
+      <DependentUpon>TipoEvento.xsd</DependentUpon>
+    </None>
+    <None Include="MaestroEvento\MaestroEventoVW.xsc">
+      <DependentUpon>MaestroEventoVW.xsd</DependentUpon>
+    </None>
+    <None Include="MaestroEvento\MaestroEventoVW.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaestroEventoVW.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MaestroEvento\MaestroEventoVW.xss">
+      <DependentUpon>MaestroEventoVW.xsd</DependentUpon>
+    </None>
+    <None Include="Maestro\DSDepartamento.xsc">
+      <DependentUpon>DSDepartamento.xsd</DependentUpon>
+    </None>
+    <None Include="Maestro\DSDepartamento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSDepartamento.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Maestro\DSDepartamento.xss">
+      <DependentUpon>DSDepartamento.xsd</DependentUpon>
+    </None>
+    <None Include="Maestro\DSDisponibilidadMaestro.xsc">
+      <DependentUpon>DSDisponibilidadMaestro.xsd</DependentUpon>
+    </None>
+    <None Include="Maestro\DSDisponibilidadMaestro.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSDisponibilidadMaestro.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Maestro\DSDisponibilidadMaestro.xss">
+      <DependentUpon>DSDisponibilidadMaestro.xsd</DependentUpon>
+    </None>
+    <None Include="Maestro\DSMaestro.xsc">
+      <DependentUpon>DSMaestro.xsd</DependentUpon>
+    </None>
+    <None Include="Maestro\DSMaestro.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSMaestro.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Maestro\DSMaestro.xss">
+      <DependentUpon>DSMaestro.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MaestroEvento\DSMaestroEvento.xsc">
+      <DependentUpon>DSMaestroEvento.xsd</DependentUpon>
+    </None>
+    <None Include="MaestroEvento\DSMaestroEvento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSMaestroEvento.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MaestroEvento\DSMaestroEvento.xss">
+      <DependentUpon>DSMaestroEvento.xsd</DependentUpon>
+    </None>
+    <None Include="Usuario\DSUsuario.xsc">
+      <DependentUpon>DSUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="Usuario\DSUsuario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSUsuario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Usuario\DSUsuario.xss">
+      <DependentUpon>DSUsuario.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

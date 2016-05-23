@@ -176,7 +176,16 @@
   <ItemGroup>
     <None Include="bin\Debug\Modulo.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BL\Proyecto.BL.csproj">
+      <Project>{64dcbdbb-7a8d-4a8d-bc88-3b32c21441fc}</Project>
+      <Name>Proyecto.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Proyecto.Data.csproj">
+      <Project>{3603539a-2b09-476e-8c22-07cf70b5069b}</Project>
+      <Name>Proyecto.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
